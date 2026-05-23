@@ -259,14 +259,14 @@ h1 span {
   color: var(--ink);
 }
 
-.trust-row {
+.fact-row {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 30px;
 }
 
-.trust-row span {
+.fact-row span {
   display: inline-flex;
   align-items: center;
   min-height: 34px;
@@ -786,7 +786,7 @@ h1 span {
   .panel-top span,
   .api-line code,
   .api-line span,
-  .trust-row span {
+  .fact-row span {
     min-width: 0;
     max-width: 100%;
   }
