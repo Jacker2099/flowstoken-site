@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>安全验证 - FlowsToken</title>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #121316;
+      color: #e4e4e7;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      overflow: hidden;
+    }
+    .hint {
+      font-size: 13px;
+      color: #a1a1aa;
+      margin-bottom: 12px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="hint">FlowsToken 桌面客户端安全验证</div>
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAAE1htZpHCGxMfHOT" data-callback="onOk" data-theme="dark"></div>
+  <script>
+    window.onOk = function(token) {
+      document.title = "FT_TURNSTILE:" + token;
+    };
+  </script>
+</body>
+</html>
