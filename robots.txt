@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
 
+# Legal and company pages
+Allow: /about.html
+Allow: /contact.html
+Allow: /terms.html
+Allow: /privacy.html
+Allow: /refund.html
+Allow: /acceptable-use.html
+
+Disallow: /404.html
+
 Sitemap: https://www.flowstoken.com/sitemap.xml

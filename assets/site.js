@@ -1,5 +1,6 @@
 const toggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
+const header = document.querySelector("[data-header]");
 
 if (toggle && nav) {
   toggle.addEventListener("click", () => {
@@ -13,4 +14,12 @@ if (toggle && nav) {
       toggle.setAttribute("aria-expanded", "false");
     }
   });
+}
+
+if (header) {
+  const onScroll = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
+  };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
 }

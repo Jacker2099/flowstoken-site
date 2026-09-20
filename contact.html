@@ -1,78 +1,855 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact | FlowToken API Credits</title>
-    <meta name="description" content="Contact Bestoo Service LLC for FlowToken API Credit sales, delivery, refund, and billing support." />
+    <title>联系我们｜FlowsToken — 智能API 未来的选择</title>
+    <meta
+      name="description"
+      content="联系 FlowsToken（智能API 未来的选择）支持：QQ客服、Telegram、技术支持邮箱、WhatsApp；官方QQ群、Telegram群组及大客户商务合作对接。"
+    />
+    <meta name="theme-color" content="#05070c" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="联系我们｜FlowsToken — 智能API 未来的选择" />
+    <meta property="og:description" content="FlowsToken 官方客服、开发者交流群组及商务合作对接通道。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.flowstoken.com/contact.html" />
+    <meta property="og:image" content="https://www.flowstoken.com/brand/logo-icon.png?v=20260904logo" />
+    <meta property="og:site_name" content="FlowsToken" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="联系我们｜FlowsToken — 智能API 未来的选择" />
+    <meta name="twitter:description" content="FlowsToken 官方客服、开发者交流群组及商务合作对接通道。" />
+    <meta name="twitter:image" content="https://www.flowstoken.com/brand/logo-icon.png?v=20260904logo" />
     <link rel="canonical" href="https://www.flowstoken.com/contact.html" />
-    <link rel="stylesheet" href="/assets/styles.css" />
-    <script defer src="/assets/site.js"></script>
+    <link rel="icon" href="/brand/favicon.png?v=20260904logo" type="image/png" />
+    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png?v=20260904logo" />
+    <link rel="stylesheet" href="/brand/styles.css?v=20260911red" />
+    <script defer src="/brand/site.js"></script>
+    <script defer src="/brand/home-auth-nav.js?v=20260901a"></script>
+    <script defer src="/brand/ticker.js?v=20260911red"></script>
+    <style>
+      /* 联系我们页面定制排版 */
+      .contact-section-head {
+        margin: 2.2rem 0 1.2rem;
+      }
+      .contact-section-head:first-of-type {
+        margin-top: 0.5rem;
+      }
+      .contact-section-head h2 {
+        font-size: 1.45rem;
+        margin: 0.4rem 0 0.25rem;
+        color: var(--ink);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+      .contact-section-head p {
+        color: var(--muted);
+        font-size: 0.92rem;
+        margin: 0;
+      }
+      .section-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.2rem 0.55rem;
+        border-radius: 6px;
+        background: rgba(96, 165, 250, 0.12);
+        color: #60a5fa;
+        border: 1px solid rgba(96, 165, 250, 0.25);
+      }
+      .section-tag-community {
+        background: rgba(52, 211, 153, 0.12);
+        color: #34d399;
+        border-color: rgba(52, 211, 153, 0.25);
+      }
+      .section-tag-gold {
+        background: rgba(212, 175, 55, 0.15);
+        color: var(--gold-soft);
+        border-color: rgba(212, 175, 55, 0.35);
+      }
+
+      /* 专区 1：客服网格 */
+      .support-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+      }
+      .support-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.9rem;
+        padding: 1.25rem 1.15rem;
+        border-radius: var(--radius);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(10, 18, 32, 0.75);
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.2s var(--ease), border-color 0.2s var(--ease), background 0.2s, box-shadow 0.2s;
+        position: relative;
+        backdrop-filter: blur(8px);
+      }
+      .support-card:hover {
+        border-color: rgba(96, 165, 250, 0.45);
+        background: rgba(16, 32, 60, 0.85);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+      }
+      .support-card-qq:hover {
+        border-color: rgba(212, 175, 55, 0.5);
+      }
+      .support-icon-wrap {
+        position: relative;
+        width: 46px;
+        height: 46px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .qq-avatar-img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        display: block;
+        filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+      }
+      .support-icon-wrap svg {
+        width: 26px;
+        height: 26px;
+        display: block;
+      }
+      .status-dot {
+        position: absolute;
+        bottom: -2px;
+        right: -2px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #10b981;
+        border: 2px solid #0a1220;
+        box-shadow: 0 0 6px #10b981;
+      }
+      .support-info {
+        min-width: 0;
+        flex: 1;
+      }
+      .support-title-row {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-bottom: 0.2rem;
+      }
+      .support-badge {
+        font-size: 0.68rem;
+        padding: 0.1rem 0.4rem;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--ink-soft);
+      }
+      .support-info strong {
+        font-size: 0.95rem;
+        color: var(--ink);
+      }
+      .support-handle {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--gold-soft);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        letter-spacing: 0.02em;
+        font-feature-settings: "tnum";
+        word-break: break-all;
+        margin-bottom: 0.25rem;
+      }
+      .support-desc {
+        font-size: 0.78rem;
+        color: var(--muted);
+        line-height: 1.45;
+        margin: 0;
+      }
+
+      /* 专区 2：社群网格 */
+      .community-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+      }
+      .community-card {
+        border-radius: var(--radius);
+        padding: 1.6rem 1.6rem;
+        background: linear-gradient(145deg, rgba(13, 23, 42, 0.85) 0%, rgba(9, 15, 28, 0.92) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), box-shadow 0.25s;
+        backdrop-filter: blur(10px);
+      }
+      .community-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .community-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(212, 175, 55, 0.35);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+      }
+      .community-card:hover::before {
+        opacity: 1;
+      }
+      .community-card-tg:hover {
+        border-color: rgba(42, 171, 238, 0.45);
+      }
+      .community-card-tg::before {
+        background: linear-gradient(90deg, transparent, rgba(42, 171, 238, 0.6), transparent);
+      }
+      .community-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.9rem;
+      }
+      .community-icon-box {
+        width: 54px;
+        height: 54px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+      }
+      .community-icon-box img {
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+      }
+      .community-header-text {
+        min-width: 0;
+      }
+      .community-badge-wrap {
+        display: flex;
+        gap: 0.4rem;
+        margin-bottom: 0.25rem;
+      }
+      .badge-gold {
+        font-size: 0.68rem;
+        font-weight: 700;
+        color: var(--gold-soft);
+        background: rgba(212, 175, 55, 0.12);
+        padding: 0.1rem 0.45rem;
+        border-radius: 4px;
+        border: 1px solid rgba(212, 175, 55, 0.25);
+      }
+      .badge-blue {
+        font-size: 0.68rem;
+        font-weight: 700;
+        color: #60a5fa;
+        background: rgba(96, 165, 250, 0.12);
+        padding: 0.1rem 0.45rem;
+        border-radius: 4px;
+        border: 1px solid rgba(96, 165, 250, 0.25);
+      }
+      .badge-live {
+        font-size: 0.68rem;
+        color: #34d399;
+        background: rgba(52, 211, 153, 0.1);
+        padding: 0.1rem 0.45rem;
+        border-radius: 4px;
+        border: 1px solid rgba(52, 211, 153, 0.2);
+      }
+      .community-header-text h3 {
+        font-size: 1.15rem;
+        margin: 0;
+        color: var(--ink);
+      }
+      .community-subtitle {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin-top: 0.15rem;
+      }
+      .community-body {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        color: var(--ink-soft);
+        margin: 0 0 1.25rem;
+      }
+      .community-action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        padding-top: 0.9rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .btn-community {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1.15rem;
+        border-radius: 8px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .btn-qq {
+        background: linear-gradient(135deg, #e8c547 0%, #d4af37 100%);
+        color: #0b111e;
+        box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
+      }
+      .btn-qq:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+        color: #000;
+      }
+      .btn-tg {
+        background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+        color: #fff;
+        box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+      }
+      .btn-tg:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
+        color: #fff;
+      }
+      .link-hint {
+        font-size: 0.76rem;
+        color: var(--muted);
+        font-family: monospace;
+      }
+
+      /* 专区 3：商务合作展板 */
+      .business-panel {
+        margin-top: 2.5rem;
+        border-radius: var(--radius);
+        padding: 1.85rem 2rem;
+        background: radial-gradient(circle at top right, rgba(30, 74, 140, 0.35) 0%, transparent 60%),
+                    linear-gradient(135deg, rgba(14, 25, 45, 0.9) 0%, rgba(8, 14, 26, 0.96) 100%);
+        border: 1px solid rgba(212, 175, 55, 0.28);
+        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+        position: relative;
+        overflow: hidden;
+      }
+      .business-header {
+        margin-bottom: 1.4rem;
+      }
+      .business-title-group {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-bottom: 0.4rem;
+      }
+      .business-title-group h2 {
+        font-size: 1.45rem;
+        margin: 0;
+        color: var(--ink);
+      }
+      .business-lead {
+        color: var(--ink-soft);
+        font-size: 0.92rem;
+        margin: 0;
+        max-width: 800px;
+        line-height: 1.6;
+      }
+      .business-perks {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin: 1.35rem 0 1.6rem;
+        padding: 1.1rem 1.25rem;
+        background: rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+      }
+      .perk-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.7rem;
+      }
+      .perk-icon {
+        font-size: 1.3rem;
+        line-height: 1;
+      }
+      .perk-item strong {
+        display: block;
+        font-size: 0.9rem;
+        color: var(--ink);
+        margin-bottom: 0.2rem;
+      }
+      .perk-item span {
+        display: block;
+        font-size: 0.78rem;
+        color: var(--muted);
+        line-height: 1.4;
+      }
+
+      .business-channels-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      .b-channel-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        padding: 1rem 1.2rem;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        background: rgba(255, 255, 255, 0.03);
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.2s ease;
+      }
+      .b-channel-btn:hover {
+        background: rgba(212, 175, 55, 0.12);
+        border-color: rgba(212, 175, 55, 0.4);
+        transform: translateY(-2px);
+      }
+      .b-channel-btn img,
+      .b-channel-btn svg {
+        flex-shrink: 0;
+      }
+      .b-channel-text {
+        min-width: 0;
+        flex: 1;
+      }
+      .b-channel-text small {
+        display: block;
+        font-size: 0.72rem;
+        color: var(--gold-soft);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+        margin-bottom: 0.15rem;
+      }
+      .b-channel-text strong {
+        display: block;
+        font-size: 0.95rem;
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        font-feature-settings: "tnum";
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .b-arrow {
+        color: var(--gold-soft);
+        font-size: 1.1rem;
+        transition: transform 0.2s;
+      }
+      .b-channel-btn:hover .b-arrow {
+        transform: translateX(4px);
+      }
+
+      /* 专区 4：底部地址与合规说明 */
+      .bottom-info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.6fr;
+        gap: 1.25rem;
+        margin-top: 2rem;
+      }
+      .bottom-info-grid .address-block,
+      .bottom-info-grid .mor-box {
+        margin: 0;
+        height: 100%;
+      }
+      .block-title-row {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.6rem;
+      }
+      .block-title-row h3,
+      .block-title-row strong {
+        margin: 0;
+        font-size: 1.05rem;
+        color: var(--ink);
+      }
+      .block-icon {
+        font-size: 1.15rem;
+      }
+
+      /* 响应式断点适配 */
+      @media (max-width: 1024px) {
+        .support-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .business-perks {
+          grid-template-columns: 1fr;
+          gap: 0.8rem;
+        }
+      }
+      @media (max-width: 768px) {
+        .community-grid {
+          grid-template-columns: 1fr;
+        }
+        .business-channels-row {
+          grid-template-columns: 1fr;
+        }
+        .bottom-info-grid {
+          grid-template-columns: 1fr;
+        }
+        .business-panel {
+          padding: 1.35rem 1.25rem;
+        }
+      }
+      @media (max-width: 540px) {
+        .support-grid {
+          grid-template-columns: 1fr;
+        }
+        .community-card {
+          padding: 1.25rem 1.15rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <header class="site-header compact" data-header>
-      <a class="brand" href="/" aria-label="FlowToken home">
-        <span class="brand-mark" aria-hidden="true">FT</span>
-        <span><strong>FlowToken</strong><small>Bestoo Service LLC</small></span>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="FlowsToken 首页">
+        <img class="brand-icon" src="/brand/logo-icon.png?v=20260904logo" width="40" height="40" alt="" decoding="async" />
+        <span class="brand-word" aria-label="FlowsToken">
+          <span class="brand-flows">Flows</span><span class="brand-token">Token</span>
+        </span>
       </a>
-      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+      <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false" data-nav-toggle>
         <span></span><span></span>
       </button>
-      <nav class="site-nav" aria-label="Main navigation" data-nav>
-        <a href="/#plans">Pricing</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/privacy.html">Privacy</a>
-        <a href="/refund.html">Refunds</a>
+      <nav class="site-nav" aria-label="主导航" data-nav>
+        <a class="nav-smart" href="/smart-api">智能API</a>
+        <a href="/#pricing">价格</a>
+        <a href="/docs">文档</a>
+        <a href="/#how">使用流程</a>
+        <a href="/announce.html">公告</a>
+        <a href="/about.html">关于</a>
+        <a href="/contact.html">联系</a>
+        <a class="nav-login" href="/login">登录</a>
+        <a class="nav-cta" href="/register">立即注册</a>
       </nav>
     </header>
-    <main class="contact-page">
-      <section class="contact-hero">
-        <p class="eyebrow">Bestoo Service LLC support</p>
-        <h1>Contact FlowToken</h1>
-        <p>
-          For sales questions, billing support, delivery issues, refund requests, or policy questions, contact Bestoo
-          Service LLC using the channels below.
+
+    <main id="main">
+      <section class="page-hero">
+        <p class="eyebrow">支持与合作</p>
+        <h1>联系我们</h1>
+        <p class="lead">
+          无论是 API 选模接入、技术交流、社群讨论，还是大额商务与企业合作，我们都随时为您提供专属响应。
         </p>
       </section>
 
-      <section class="contact-grid" aria-label="Contact details">
-        <article>
-          <span>Email</span>
-          <h2><a href="mailto:bestoo@usabestoo.com">bestoo@usabestoo.com</a></h2>
-          <p>Use email for order records, delivery requests, refund requests, and support attachments.</p>
-        </article>
-        <article>
-          <span>Phone</span>
-          <h2><a href="tel:+19192131199">+1 919 213 1199</a></h2>
-          <p>Phone support is available for urgent billing, delivery, and account access questions.</p>
-        </article>
-        <article>
-          <span>Business</span>
-          <h2>Bestoo Service LLC</h2>
-          <p>
-            30 N Gould St Ste N, Sheridan, WY 82801, United States. Bestoo Service LLC provides prepaid AI API credit
-            packages and related digital support.
-          </p>
-        </article>
-      </section>
+      <section class="section" style="padding-top: 0">
+        <div class="wrap">
+          <!-- 专区 1：即时客服与技术支持 -->
+          <div class="contact-section-head">
+            <span class="section-tag">在线客服</span>
+            <h2>即时技术支持</h2>
+            <p>适合账号注册、充值到账、API 报错排查与控制台使用疑难解答</p>
+          </div>
 
-      <section class="section section-light support-notes">
-        <div class="section-heading">
-          <p class="eyebrow">What to include</p>
-          <h2>Support request details</h2>
-          <p>
-            Include your order email, package name, purchase date, and a short description of the issue. Refund and
-            billing requests are normally reviewed within two business days.
-          </p>
+          <div class="support-grid">
+            <!-- QQ 客服 (采用全新眨眼企鹅头像) -->
+            <a class="support-card support-card-qq" href="https://wpa.qq.com/msgrd?v=3&uin=3901106499&site=qq&menu=yes" target="_blank" rel="noopener">
+              <div class="support-icon-wrap">
+                <img class="qq-avatar-img" src="/brand/contact-icons/qq-avatar.png?v=20260911a" width="40" height="40" alt="QQ 客服" />
+                <span class="status-dot"></span>
+              </div>
+              <div class="support-info">
+                <div class="support-title-row">
+                  <span class="support-badge">在线咨询</span>
+                  <strong>QQ 客服</strong>
+                </div>
+                <div class="support-handle">3901106499</div>
+                <p class="support-desc">点击发起 QQ 对话，实时协助账单与 API 接入</p>
+              </div>
+            </a>
+
+            <!-- Telegram 客服 -->
+            <a class="support-card" href="https://t.me/usa519" target="_blank" rel="noopener">
+              <div class="support-icon-wrap">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#2AABEE"/><path fill="#fff" d="M16.84 8.16 15.2 16.1c-.12.54-.44.67-.9.42l-2.48-1.83-1.2 1.15c-.13.13-.24.24-.5.24l.18-2.52 4.6-4.15c.2-.18-.04-.28-.31-.1l-5.7 3.58-2.45-.77c-.53-.16-.54-.53.11-.78l9.56-3.69c.44-.16.83.11.69.75z"/></svg>
+                <span class="status-dot"></span>
+              </div>
+              <div class="support-info">
+                <div class="support-title-row">
+                  <span class="support-badge">即时通讯</span>
+                  <strong>Telegram 客服</strong>
+                </div>
+                <div class="support-handle">@usa519</div>
+                <p class="support-desc">快速双向沟通，提供全球节点联通与故障排查</p>
+              </div>
+            </a>
+
+            <!-- 官方支持邮箱 -->
+            <a class="support-card" href="mailto:chowjack2098@gmail.com">
+              <div class="support-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.6" y="5.2" width="18.8" height="13.6" rx="2.4" stroke="#60A5FA" stroke-width="1.7"/><path d="M3.8 7.3 12 13.1l8.2-5.8" stroke="#60A5FA" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="support-info">
+                <div class="support-title-row">
+                  <span class="support-badge">书面工单</span>
+                  <strong>官方技术邮箱</strong>
+                </div>
+                <div class="support-handle">chowjack2098@gmail.com</div>
+                <p class="support-desc">适合长日志排查、故障复现及凭证凭单沟通</p>
+              </div>
+            </a>
+
+            <!-- WhatsApp -->
+            <a class="support-card" href="https://wa.me/19192131199" target="_blank" rel="noopener">
+              <div class="support-icon-wrap">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M12 2.1C6.55 2.1 2.1 6.46 2.1 11.8c0 1.72.46 3.4 1.34 4.86L2 21.9l5.4-1.42A9.86 9.86 0 0 0 12 21.9c5.45 0 9.9-4.36 9.9-9.7S17.45 2.1 12 2.1z"/><path fill="#fff" d="M16.62 14.28c-.22-.11-1.28-.63-1.48-.7-.2-.08-.34-.11-.49.11l-.7.86c-.13.14-.27.16-.5.05-.27-.13-1.12-.41-2.14-1.32-.79-.7-1.32-1.56-1.48-1.83-.15-.26-.02-.4.1-.53l.37-.43c.1-.12.13-.27.2-.4.06-.13.03-.25 0-.36l-.74-1.76c-.19-.46-.39-.5-.53-.51h-.44c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.51 2.41.94 2.41.63 2.85.59.43-.04 1.4-.57 1.6-1.12.2-.55.2-.99.14-1.09z"/></svg>
+              </div>
+              <div class="support-info">
+                <div class="support-title-row">
+                  <span class="support-badge">国际专线</span>
+                  <strong>WhatsApp 专线</strong>
+                </div>
+                <div class="support-handle">+1 919 213 1199</div>
+                <p class="support-desc">合理工作时间内支持留言咨询与通话协助</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 专区 2：官方社群与生态讨论 (Community) -->
+          <div class="contact-section-head" style="margin-top: 2.5rem;">
+            <span class="section-tag section-tag-community">社群交流</span>
+            <h2>官方交流群组</h2>
+            <p>加入一线 AI 开发者社群，第一时间掌握模型上线、节点升级与特惠福利</p>
+          </div>
+
+          <div class="community-grid">
+            <!-- 官方 QQ 群 -->
+            <div class="community-card community-card-qq">
+              <div>
+                <div class="community-header">
+                  <div class="community-icon-box">
+                    <img src="/brand/contact-icons/qq-avatar.png?v=20260911a" width="44" height="44" alt="QQ Group" />
+                  </div>
+                  <div class="community-header-text">
+                    <div class="community-badge-wrap">
+                      <span class="badge-gold">官方交流群</span>
+                      <span class="badge-live">在线交流</span>
+                    </div>
+                    <h3>FlowsToken 官方 QQ 群</h3>
+                    <div class="community-subtitle">点击直达一键加群</div>
+                  </div>
+                </div>
+                <p class="community-body">
+                  探讨智能选模心得、路由参数调优、Prompt 实战工程技巧，获取官方第一时间节点维护广播、版本发版公告与限时特惠活动。
+                </p>
+              </div>
+              <div class="community-action">
+                <a class="btn-community btn-qq" href="https://qm.qq.com/q/fsMDb2uQCI" target="_blank" rel="noopener">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+                  一键加入官方 QQ 群
+                </a>
+                <span class="link-hint">qm.qq.com/q/fsMDb2uQCI</span>
+              </div>
+            </div>
+
+            <!-- 官方 Telegram 群组 -->
+            <div class="community-card community-card-tg">
+              <div>
+                <div class="community-header">
+                  <div class="community-icon-box">
+                    <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#2AABEE"/><path fill="#fff" d="M16.84 8.16 15.2 16.1c-.12.54-.44.67-.9.42l-2.48-1.83-1.2 1.15c-.13.13-.24.24-.5.24l.18-2.52 4.6-4.15c.2-.18-.04-.28-.31-.1l-5.7 3.58-2.45-.77c-.53-.16-.54-.53.11-.78l9.56-3.69c.44-.16.83.11.69.75z"/></svg>
+                  </div>
+                  <div class="community-header-text">
+                    <div class="community-badge-wrap">
+                      <span class="badge-blue">官方频道与群</span>
+                      <span class="badge-live">全球同步</span>
+                    </div>
+                    <h3>FlowsToken 官方 Telegram</h3>
+                    <div class="community-subtitle">t.me/flowstoken</div>
+                  </div>
+                </div>
+                <p class="community-body">
+                  面向全球开发者的官方 Telegram 群组与资讯频道。全球模型上线速递、上游通道网络可用率监控、跨国调用延迟优化技术交流。
+                </p>
+              </div>
+              <div class="community-action">
+                <a class="btn-community btn-tg" href="https://t.me/flowstoken" target="_blank" rel="noopener">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+                  加入 Telegram 官方群
+                </a>
+                <span class="link-hint">t.me/flowstoken</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 专区 3：商务合作展板 -->
+          <div class="business-panel">
+            <div class="business-header">
+              <div class="business-title-group">
+                <span class="section-tag section-tag-gold">专属通道</span>
+                <h2>商务与大客户合作</h2>
+              </div>
+              <p class="business-lead">
+                针对企业客户采购、团队规模化接入、API 渠道分销代理及品牌联合生态，FlowsToken 提供专属商务经理与技术架构师 1 对 1 全程对接保障。
+              </p>
+            </div>
+
+            <div class="business-perks">
+              <div class="perk-item">
+                <span class="perk-icon">⚡</span>
+                <div>
+                  <strong>专属高并发通道保障</strong>
+                  <span>独立通道资源池，保障严苛高 QPS 业务不受限流影响</span>
+                </div>
+              </div>
+              <div class="perk-item">
+                <span class="perk-icon">📑</span>
+                <div>
+                  <strong>对公合同与合规凭据</strong>
+                  <span>正规商业合同、对公结算流程与合法财务发票凭据</span>
+                </div>
+              </div>
+              <div class="perk-item">
+                <span class="perk-icon">💎</span>
+                <div>
+                  <strong>大额优惠与授信结算</strong>
+                  <span>阶梯大额预存优惠折上折，支持重点企业授信额度</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="business-channels-row">
+              <a class="b-channel-btn" href="https://wpa.qq.com/msgrd?v=3&uin=3901106499&site=qq&menu=yes" target="_blank" rel="noopener">
+                <img src="/brand/contact-icons/qq-avatar.png?v=20260911a" width="28" height="28" alt="QQ" />
+                <div class="b-channel-text">
+                  <small>商务合作 QQ</small>
+                  <strong>3901106499</strong>
+                </div>
+                <span class="b-arrow">→</span>
+              </a>
+
+              <a class="b-channel-btn" href="https://t.me/usa519" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#2AABEE"/><path fill="#fff" d="M16.84 8.16 15.2 16.1c-.12.54-.44.67-.9.42l-2.48-1.83-1.2 1.15c-.13.13-.24.24-.5.24l.18-2.52 4.6-4.15c.2-.18-.04-.28-.31-.1l-5.7 3.58-2.45-.77c-.53-.16-.54-.53.11-.78l9.56-3.69c.44-.16.83.11.69.75z"/></svg>
+                <div class="b-channel-text">
+                  <small>商务合作 Telegram</small>
+                  <strong>@usa519</strong>
+                </div>
+                <span class="b-arrow">→</span>
+              </a>
+
+              <a class="b-channel-btn" href="mailto:chowjack2098@gmail.com?subject=%5B%E5%95%86%E5%8A%A1%E5%90%88%E4%BD%9C%5D%20%E4%BC%81%E4%B8%9A%E5%92%A8%E8%AF%A2">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" aria-hidden="true"><rect x="2.6" y="5.2" width="18.8" height="13.6" rx="2.4" stroke="#60A5FA" stroke-width="1.7"/><path d="M3.8 7.3 12 13.1l8.2-5.8" stroke="#60A5FA" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div class="b-channel-text">
+                  <small>商务合作邮箱</small>
+                  <strong>chowjack2098@gmail.com</strong>
+                </div>
+                <span class="b-arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 专区 4：地址与支付说明 -->
+          <div class="bottom-info-grid">
+            <div class="address-block">
+              <div class="block-title-row">
+                <span class="block-icon">🏢</span>
+                <h3>实体业务地址</h3>
+              </div>
+              <p>
+                <strong>Bestoo Service LLC</strong><br />
+                30 N Gould St Ste N<br />
+                Sheridan, WY 82801<br />
+                United States
+              </p>
+            </div>
+
+            <div class="mor-box">
+              <div class="block-title-row">
+                <span class="block-icon">💳</span>
+                <strong>支付说明</strong>
+              </div>
+              <p>
+                FlowsToken 由美国公司 <strong>Bestoo Service LLC</strong> 依法运营。中国客户可使用微信支付、Visa / Mastercard，以及 Apple Pay / Google Pay 充值；其他地区支持银行卡与 Apple Pay / Google Pay 等（以收银台为准）。支付成功后额度自动到账。
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
+
     <footer class="site-footer">
-      <div><strong>FlowToken API Credits</strong><p>Bestoo Service LLC, 30 N Gould St Ste N, Sheridan, WY 82801, United States</p></div>
-      <nav aria-label="Footer navigation">
-        <a href="/">Home</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a><a href="/refund.html">Refunds</a>
-      </nav>
-      <p class="fine-print">© 2026 Bestoo Service LLC. All rights reserved.</p>
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <a class="brand footer-brand-link" href="/" aria-label="FlowsToken">
+            <img class="brand-icon" src="/brand/logo-icon.png?v=20260904logo" width="32" height="32" alt="" decoding="async" />
+            <span class="brand-word" aria-label="FlowsToken">
+              <span class="brand-flows">Flows</span><span class="brand-token">Token</span>
+            </span>
+          </a>
+          <p>智能API 未来的选择 · 预付费按量计费</p>
+        </div>
+        <div>
+          <h4>产品</h4>
+          <nav>
+            <a href="/smart-api">智能API</a>
+            <a href="/pricing">模型价格</a>
+            <a href="/docs">接入文档</a>
+            <a href="/register">注册</a>
+            <a href="/login">登录</a>
+            <a href="/console/topup">充值</a>
+          </nav>
+        </div>
+        <div>
+          <h4>支持与合规</h4>
+          <nav>
+            <a href="/announce.html">公告</a>
+            <a href="/about.html">关于我们</a>
+            <a href="/contact.html">联系我们</a>
+            <a href="/privacy.html">隐私政策</a>
+            <a href="/terms.html">服务条款</a>
+            <a href="/refund.html">退款政策</a>
+            <a href="/acceptable-use.html">可接受使用政策</a>
+          </nav>
+        </div>
+      </div>
+            <div class="wrap footer-bottom">
+        <div class="footer-bottom-row" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.25rem; width: 100%;">
+          <div class="footer-company-info">
+            <p style="margin: 0; font-weight: 600; color: #fff; font-size: 0.95rem; letter-spacing: 0.01em;">© 2026 Bestoo Service LLC. All rights reserved.</p>
+            <p class="footer-address" style="margin: 0.35rem 0 0; color: var(--muted); font-size: 0.85rem;">30 N Gould St Ste N, Sheridan, WY 82801, United States</p>
+          </div>
+          <div class="footer-contact-inline" style="display: flex; flex-direction: column; gap: 0.35rem; align-items: flex-end; text-align: right;">
+            <div style="font-weight: 600; font-size: 0.86rem; color: #e2e8f0; display: flex; align-items: center; gap: 7px;">
+              <span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #10b981; box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);"></span>
+              客服与技术支持（7×24小时服务）
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-size: 0.83rem; color: #94a3b8; justify-content: flex-end;">
+              <span>客服邮箱：<a href="mailto:chowjack2098@gmail.com" style="color: #60a5fa; text-decoration: none;">chowjack2098@gmail.com</a></span>
+              <span>客服电话 / WhatsApp：<a href="tel:+19192131199" style="color: #60a5fa; text-decoration: none;">+1 919 213 1199</a></span>
+              <span>在线客服：<a href="https://t.me/usa519" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: none;">Telegram @usa519</a></span>
+            </div>
+          </div>
+        </div>
+        <p class="footer-mor">
+          FlowsToken 由美国公司 Bestoo Service LLC 运营。充值支付经合规支付通道处理；服务与额度由本公司提供与支持。
+        </p>
+        <p class="footer-disclaimer" style="font-size: 12px; color: #888; margin-top: 8px; line-height: 1.6;">
+          免责声明：FlowsToken / Bestoo 为第三方技术平台，与 Anthropic、OpenAI、Google 等大模型厂商无任何从属、授权或直接关联关系。本平台提及的所有品牌、商标及服务标志均归其各自所有者所有。
+        </p>
+      </div>
     </footer>
   </body>
 </html>
