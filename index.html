@@ -1,382 +1,507 @@
 <!doctype html>
 <html lang="zh-CN">
   <head>
-    <meta name="waffo-verify" content="93a2a69b430049c945c47b56fdb6b70d" />
-
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="/assets/ft-language.css?v=20261001en2"><script src="/brand/ft-language.js?v=20261001en2"></script><script defer src="/assets/ft-translations-common.js?v=20261001en2"></script><script defer src="/assets/i18n/index.js?v=20261001en2"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>FlowsToken — 智能选模，一个入口</title>
-    <meta
-      name="description"
-      content="FlowsToken 智能API（bestoo-auto）：智能选模，一个入口；按任务匹配并按需升级。未来的选择。也可使用普通组与官方组模型。预付费按量计费。"
-    />
-    <meta name="theme-color" content="#05070c" />
+    <title>FlowsToken — 智能选模，一个入口 · OpenAI / Anthropic 兼容 API</title>
+    <meta name="description" content="FlowsToken：一个 Base URL 接入主流大模型。智能API（Bestoo-Auto）为高端智能入口，按任务选模升档，$4/$16；普通组更经济；官方组提供官方模型，官方价 ×1.1。预付费按量，价格公开。" />
+    <meta name="theme-color" content="#fbfbf9" />
     <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="FlowsToken — 智能选模，一个入口" />
-    <meta property="og:description" content="智能选模，一个入口。bestoo-auto 按任务选模并按需升级；未来的选择。普通组与官方组仍可用。预付费按量付费。" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.flowstoken.com/" />
-    <meta property="og:image" content="https://www.flowstoken.com/brand/logo-icon.png?v=20260904logo" />
-    <meta property="og:site_name" content="FlowsToken" />
-    <meta property="og:locale" content="zh_CN" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="FlowsToken — 智能选模，一个入口" />
-    <meta name="twitter:description" content="智能选模，一个入口。bestoo-auto 按任务选模并按需升级；未来的选择。普通组与官方组仍可用。预付费按量付费。" />
-    <meta name="twitter:image" content="https://www.flowstoken.com/brand/logo-icon.png?v=20260904logo" />
     <link rel="canonical" href="https://www.flowstoken.com/" />
-    <link rel="icon" href="/brand/favicon.png?v=20260904logo" type="image/png" />
-    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png?v=20260904logo" />
-    <link rel="stylesheet" href="/brand/styles.css?v=20260911red" />
-    <script defer src="/brand/site.js?v=20260901p"></script>
-    <script defer src="/brand/home-auth-nav.js?v=20260901a"></script>
-    <script defer src="/brand/ticker.js?v=20260911red"></script>
-    <script type="application/ld+json">
+    <link rel="icon" href="/brand/favicon.png?v=20260915g" type="image/png" />
+    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png?v=20260915g" />
+    <link rel="stylesheet" href="/assets/fonts.css?v=20260915" />
+    <link rel="stylesheet" href="/assets/site.css?v=20261006discount" />
+  <link rel="stylesheet" href="/assets/home-experience.css?v=20261004a" />
+  <script src="/assets/i18n/home-experience-20261004.js?rev=9cc978de1372" defer></script>
+  <link rel="stylesheet" href="/assets/connection-guide.css?v=20261004a" />
+  <link rel="alternate" hreflang="zh-CN" href="https://www.flowstoken.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.flowstoken.com/" />
+  <meta property="og:title" content="FlowsToken — 智能选模，一个入口" />
+  <meta property="og:description" content="一个 Base URL 接入主流大模型。智能API高端入口按任务选模升档；普通组更经济；官方组提供官方模型，官方价 ×1.1。预付费按量计费。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.flowstoken.com/" />
+  <meta property="og:image" content="https://www.flowstoken.com/brand/logo-icon.png" />
+  <meta property="og:site_name" content="FlowsToken" />
+  <meta property="og:locale" content="zh_CN" />
+  <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://www.flowstoken.com/#organization",
-      "name": "FlowsToken",
-      "slogan": "智能选模，一个入口 · 未来的选择",
-      "url": "https://www.flowstoken.com/",
-      "logo": "https://www.flowstoken.com/brand/logo-icon.png?v=20260904logo",
-      "description": "FlowsToken — 智能选模，一个入口。未来的选择。bestoo-auto 按任务自动选模与升级；也可使用普通组与官方组模型。兼容 OpenAI / Anthropic，预付费按量计费。"
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.flowstoken.com/#website",
-      "name": "FlowsToken",
-      "alternateName": "智能选模，一个入口",
-      "url": "https://www.flowstoken.com/",
-      "description": "FlowsToken — 智能选模，一个入口。未来的选择。智能API（bestoo-auto）；普通组与官方组模型仍可用。",
-      "publisher": {
-        "@id": "https://www.flowstoken.com/#organization"
-      },
-      "inLanguage": "zh-CN"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://www.flowstoken.com/#smart-api",
-      "name": "FlowsToken 智能API",
-      "alternateName": "智能选模，一个入口",
-      "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "Web",
-      "url": "https://www.flowstoken.com/smart-api",
-      "description": "智能选模，一个入口。未来的选择。bestoo-auto 按任务自动选模并按需升级。",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "description": "预付费按量计费"
-      },
-      "provider": {
-        "@id": "https://www.flowstoken.com/#organization"
-      }
-    }
-  ]
+"@context": "https://schema.org",
+"@graph": [
+  {
+    "@type": "Organization",
+    "@id": "https://www.flowstoken.com/#organization",
+    "name": "FlowsToken",
+    "legalName": "Bestoo Service LLC",
+    "url": "https://www.flowstoken.com/",
+    "logo": "https://www.flowstoken.com/brand/logo-icon.png",
+    "address": { "@type": "PostalAddress", "streetAddress": "30 N Gould St Ste N", "addressLocality": "Sheridan", "addressRegion": "WY", "postalCode": "82801", "addressCountry": "US" },
+    "contactPoint": [{ "@type": "ContactPoint", "contactType": "customer support", "email": "chowjack2098@gmail.com", "telephone": "+1-919-213-1199", "availableLanguage": ["zh-CN", "en"] }]
+  },
+  {
+    "@type": "WebSite",
+    "@id": "https://www.flowstoken.com/#website",
+    "name": "FlowsToken",
+    "url": "https://www.flowstoken.com/",
+    "publisher": { "@id": "https://www.flowstoken.com/#organization" },
+    "inLanguage": "zh-CN"
+  },
+  {
+    "@type": "SoftwareApplication",
+    "@id": "https://www.flowstoken.com/#smart-api",
+    "name": "FlowsToken 智能API (Bestoo-Auto)",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web",
+    "url": "https://www.flowstoken.com/smart-api",
+    "offers": { "@type": "Offer", "priceCurrency": "USD", "price": "4.00", "description": "智能API高端入口：输入 $4 / 1M、输出 $16 / 1M tokens，按任务选模升档，预付费按量计费" },
+    "provider": { "@id": "https://www.flowstoken.com/#organization" }
+  }
+]
 }
-    </script>
+  </script>
   </head>
   <body>
     <a class="skip-link" href="#main">跳到主要内容</a>
-    <header class="site-header" data-header>
-                  <a class="brand" href="/" aria-label="FlowsToken 首页">
-        <img class="brand-icon" src="/brand/logo-icon.png?v=20260904logo" width="40" height="40" alt="" decoding="async" />
-        <span class="brand-word" aria-label="FlowsToken">
-          <span class="brand-flows">Flows</span><span class="brand-token">Token</span>
+
+    <div class="announce" role="region" aria-label="公告">
+      <div class="wrap">
+        <span class="tag">公告</span>
+        <span class="announce-msgs">
+          <span class="announce-msg is-on">一个入口，按任务选模。了解 Bestoo-Auto 智能API →</span>
+          <span class="announce-msg">官方组全部型号官方价 ×1.1 · 模型 ID 与厂商一致 · 不做模型替换。</span>
+          <span class="announce-msg">支付宝、微信支付、银行卡充值已全部开通，实时到账。</span>
+          <span class="announce-msg">三种分组，各有所长。模型与实时价格以模型广场为准。</span>
         </span>
-      </a>
-      <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false" data-nav-toggle>
-        <span></span><span></span>
-      </button>
-      <nav class="site-nav" aria-label="主导航" data-nav>
-        <a class="nav-smart" href="/smart-api">智能API</a>
-        <a href="#pricing">价格</a>
-        <a href="/docs">配置教程</a>
-        <a href="#how">使用流程</a>
-        <a href="/announce.html">公告</a>
-        <a href="/about.html">关于</a>
-        <a href="/contact.html">联系</a>
-        <a class="nav-login" href="/login">登录</a>
-        <a class="nav-cta" href="/register">立即注册</a>
-      </nav>
+        <a href="/announce.html">查看公告</a>
+      </div>
+    </div>
+
+    <header class="site-header" data-header>
+      <div class="wrap">
+        <a class="brand" href="/" aria-label="FlowsToken 首页">
+          <img class="brand-mark" src="/brand/logo-mark.png?v=20260915g" alt="" width="46" height="26" />
+          <span class="brand-word">Flows<b>Token</b></span>
+        </a>
+
+        <nav class="site-nav" aria-label="主导航" data-nav>
+          <a href="/" data-nav="home" class="is-current">首页</a>
+          <a href="/smart-api" data-nav="smart-api">智能API</a>
+          <a href="/desktop" data-nav="desktop">桌面端</a>
+          <a href="/mobile" data-nav="mobile">移动端</a>
+          <a href="/#groups" data-nav="groups">分组与价格</a>
+          <a href="/pricing" data-nav="pricing">模型广场</a>
+          <a href="/docs" data-nav="docs">配置教程</a>
+          <a href="/announce.html" data-nav="announce">公告</a>
+          <a href="/about.html" data-nav="about">关于</a>
+          <a href="/contact.html" data-nav="contact">联系</a>
+        </nav>
+
+        <div class="header-tools">
+          <a class="btn btn-ghost nav-login" href="/login">登录</a>
+          <a class="btn btn-primary nav-cta" href="/register">注册</a>
+          <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false" data-nav-toggle><span></span><span></span></button>
+        </div>
+      </div>
     </header>
 
-    <main id="main">
-      <section class="hero">
-        <div class="wrap hero-inner">
-          <div class="hero-copy">
-                        <div class="hero-brand" aria-label="FlowsToken">
-              <img class="brand-icon hero-brand-icon" src="/brand/logo-icon.png?v=20260904logo" width="88" height="88" alt="" decoding="async" />
-              <span class="brand-word hero-brand-word">
-                <span class="brand-flows">Flows</span><span class="brand-token">Token</span>
-              </span>
+    <main id="main" class="ft-home">
+      <!-- Hero: explanatory illustration, never live telemetry -->
+      <section class="hero ft-hero">
+        <div class="wrap">
+          <div class="ft-hero-copy">
+            <p class="eyebrow"><span class="ft-brand-line" aria-hidden="true"></span> 为想法找到合适的模型</p>
+            <h1>把精力留给创造，<br /><em>选模交给我们。</em></h1>
+            <p class="hero-lede">从第一段代码，到下一款产品。一个 API 入口连接主流模型，让 <code>Bestoo-Auto</code> 按任务匹配能力，也可按预算自选模型。</p>
+            <div class="hero-actions">
+              <a class="btn btn-accent btn-lg" href="/register">开始使用<span class="arrow" aria-hidden="true">↗</span></a>
+              <a class="btn btn-outline btn-lg" href="#connect">获取客户端配置<span aria-hidden="true">↓</span></a>
             </div>
-<p class="eyebrow">主推服务 · 智能API</p>
-            <h1>智能选模，<br>一个入口</h1>
-                        <p class="eyebrow">未来的选择</p>
-<p class="hero-text">
-              聊天、写作、编程与工具调用，统一使用 <code>bestoo-auto</code>。由系统按任务匹配模型、按需升级，减少逐个选模和反复配置的麻烦。普通组与官方组继续提供模型服务。
-            </p>
-            <div class="hero-actions" aria-label="主要操作">
-              <a class="button primary" href="/smart-api">了解智能API</a>
-              <a class="button secondary" href="/console/token">创建智能API密钥</a>
-            </div>
-            <div class="fact-row" aria-label="服务要点">
-              <span>一个模型名</span>
-              <span>按任务匹配</span>
-              <span>统一公开售价</span>
+            <p class="ft-hero-note">预付费按量 · 价格公开 · 无需月度订阅</p>
+            <div class="hero-facts" aria-label="服务要点">
+              <div><strong>01</strong><span>统一接入地址</span></div>
+              <div><strong>03</strong><span>分组，各有所长</span></div>
+              <div><strong data-live-pair="smart:Bestoo-Auto">$4 / $16</strong><span>智能API组输入 / 输出，USD / 百万 Token</span></div>
             </div>
           </div>
-
-          <aside class="hero-panel" aria-label="智能API接入信息">
-            <div class="panel-top">
-              <span>智能API · 已开放</span>
-              <span>在线可用</span>
-            </div>
-            <div class="endpoint-box">
-              <small>OpenAI 兼容 Base URL</small>
-              <div class="endpoint-row">
-                <code data-copy-text>https://www.flowstoken.com/v1</code>
-                <button type="button" class="copy-btn" data-copy aria-label="复制 OpenAI Base URL">复制</button>
-              </div>
-            </div>
-            <div class="endpoint-box" style="margin-top: 12px">
-              <small>统一模型名 · 智能API组</small>
-              <div class="endpoint-row">
-                <code data-copy-text>bestoo-auto</code>
-                <button type="button" class="copy-btn" data-copy aria-label="复制智能API模型名">复制</button>
-              </div>
-            </div>
-            <div class="metric-grid">
-              <article>
-                <small>分组</small>
-                <strong>智能API</strong>
-                <span>创建密钥时选择</span>
-              </article>
-              <article>
-                <small>输入单价</small>
-                <strong>$2 / 1M</strong>
-                <span>每百万 Token</span>
-              </article>
-              <article>
-                <small>输出单价</small>
-                <strong>$8 / 1M</strong>
-                <span>每百万 Token</span>
-              </article>
-            </div>
+          <aside class="ft-routing" aria-label="智能选模流程示意">
+            <div class="ft-routing-top"><span>FLOWS / INTELLIGENCE</span><span class="ft-example">流程示意</span></div>
+            <div class="ft-task"><span class="ft-task-icon" aria-hidden="true">⌘</span><div><small>你的下一个任务</small><p>分析这段代码，找出问题并给出修改建议。</p></div></div>
+            <div class="ft-route-line" aria-hidden="true"><span></span></div>
+            <div class="ft-router-node"><img src="/brand/logo-mark.png?v=20260915g" alt="" width="46" height="26" /><div><strong>Bestoo-Auto</strong><span>一个模型名，按任务匹配能力</span></div><span class="ft-node-symbol" aria-hidden="true">✳</span></div>
+            <div class="ft-route-branches" aria-hidden="true"></div>
+            <ol class="ft-route-stages"><li><span>01</span><strong>理解任务</strong><small>上下文与工具</small></li><li><span>02</span><strong>匹配模型</strong><small>能力与可用性</small></li><li><span>03</span><strong>按需检查</strong><small>必要时升级</small></li></ol>
+            <div class="ft-routing-bottom"><span>你继续构建，接口保持熟悉。</span><a href="/smart-api#smart-workload">对比智能API组费用 <span aria-hidden="true">↗</span></a></div>
           </aside>
         </div>
+        <div class="wrap ft-endpoint-bar"><div><span>OpenAI 兼容 Base URL</span><div class="kv-row"><code data-copy-text>https://www.flowstoken.com/v1</code><button type="button" class="copy" data-copy aria-label="复制 Base URL">复制</button></div></div><a href="/docs">两种兼容协议，接入你熟悉的工具 <span aria-hidden="true">↗</span></a></div>
       </section>
+      <div class="ft-tools-band"><div class="wrap"><p>连接你的开发工作流</p><div><a href="#connect" data-ft-connect-client="opencode">OpenCode</a><a href="#connect" data-ft-connect-client="cline">Cline</a><a href="#connect" data-ft-connect-client="roo">Roo Code</a><a href="#connect" data-ft-connect-client="workbuddy">WorkBuddy</a><a href="#connect" data-ft-connect-client="zed">Zed</a><a href="#connect" data-ft-connect-client="cursor">Cursor</a></div><span>按客户端查看适配说明</span></div></div>
 
-      <section class="notice-band" aria-label="支付说明">
+      <!-- Groups -->
+      <section id="groups" class="section section-alt">
         <div class="wrap">
-          <p>
-            <strong>FlowsToken</strong> 由美国公司 <strong>Bestoo Service LLC</strong> 依法运营，提供预付费 AI API 额度服务。
-            <strong>中国客户</strong>可在收银台使用<strong>微信支付</strong>（扫码）、Visa / Mastercard，以及 Apple Pay / Google Pay（视设备与收银台展示）；
-            <strong>其他国家 / 地区客户</strong>同样支持银行卡与 Apple Pay / Google Pay 等（以收银台实时展示为准）。支付成功后额度自动到账。
-          </p>
+          <div class="section-head">
+            <p class="eyebrow">三种分组</p>
+            <h2>你的任务，值得合适的选择。</h2>
+            <p>想省选模时间，选智能API组；想精打细算，选普通组；需要明确官方型号，选官方组。</p>
+          </div>
+
+          <div class="groups">
+            <article class="group is-featured">
+              <div class="group-top">
+                <p class="eyebrow">Smart</p>
+                <span class="pill">主推</span>
+              </div>
+              <h3>智能API</h3>
+              <p class="basis"><span class="ft-scenario">高阶能力，也能精打细算</span><code>Bestoo-Auto</code> 按任务调用合适能力，复杂任务支持必要检查与升级。</p>
+              <div class="price">
+                <span>输入 <b>$4.00</b> / 1M</span>
+                <span>输出 <b>$16.00</b> / 1M</span>
+              </div>
+              <ul>
+                <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>适合编程辅助、分析与多步骤工作流</span></li>
+                <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>按任务匹配模型，支持必要的检查与升级</span></li>
+                <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>统一公开单价，内部升级不另收费</span></li>
+              </ul>
+              <div class="actions">
+                <a class="btn btn-accent" href="/keys?create_group=smart">创建密钥</a>
+                <a class="btn btn-ghost" href="/pricing?group=smart">查看价格</a>
+              </div>
+            </article>
+
+            <article class="group">
+              <div class="group-top">
+                <p class="eyebrow">Standard</p>
+              </div>
+              <h3>普通组</h3>
+              <p class="basis"><span class="ft-scenario">有偏好的模型，也有自己的预算</span>自己选择具体型号，适合日常使用、测试脚本与成本敏感的项目。</p>
+              <div class="price">
+                <span>低至官方价 <b>1 折起</b></span>
+                <span>示例 <code>gpt-5.6-luna</code> <b data-live-pair="default:gpt-5.6-luna">$0.19 / $0.97</b></span>
+              </div>
+              <ul>
+                <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>GPT / Claude / DeepSeek 主流型号</span></li>
+                <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>可用时尝试备用线路，减少手动切换</span></li>
+                <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>适合成本敏感、可接受第三方线路的场景</span></li>
+              </ul>
+              <div class="actions">
+                <a class="btn btn-outline" href="/keys?create_group=default">创建密钥</a>
+                <a class="btn btn-ghost" href="/pricing?group=default">查看价格</a>
+              </div>
+            </article>
+
+            <article class="group">
+              <div class="group-top">
+                <p class="eyebrow">Official</p>
+              </div>
+              <h3>官方组</h3>
+              <p class="basis"><span class="ft-scenario">清楚知道，用的是哪个模型</span>按明确的官方型号接入，适合有指定模型要求的应用。</p>
+              <div class="price">
+                <span>官方价 <b>×1.1</b></span>
+                <span>示例 <code>openai/gpt-5.5</code> <b data-live-pair="vip:openai/gpt-5.5">$5.50 / $33.00</b></span>
+              </div>
+              <ul>
+                <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>OpenAI · Anthropic · Google · DeepSeek · 阿里 · 月之暗面 等厂商官方型号</span></li>
+                <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>统一网关接入，按型号核对接口能力</span></li>
+                <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>适合对模型确定性有要求的生产环境</span></li>
+              </ul>
+              <div class="actions">
+                <a class="btn btn-outline" href="/keys?create_group=vip">创建密钥</a>
+                <a class="btn btn-ghost" href="/pricing?group=vip">查看价格</a>
+              </div>
+            </article>
+          </div>
+          <p class="ft-group-note">点击创建密钥，即可进入对应分组的创建表单；提交前可调整额度与有效期。<a href="/docs/quickstart">查看接入步骤 →</a></p>
         </div>
       </section>
 
+      <section class="ft-connection" id="connect" aria-labelledby="ft-connection-title" data-ft-no-translate>
+  <div class="wrap">
+    <div class="ft-connection__heading">
+      <div>
+        <p class="ft-connection__eyebrow" data-ft-connection-text="接入助手">接入助手</p>
+        <h2 id="ft-connection-title" data-ft-connection-text="选好工具，复制接入配置。">选好工具，复制接入配置。</h2>
+      </div>
+      <p data-ft-connection-text="选你的客户端和密钥分组，生成一份对应的接入指引。">选你的客户端和密钥分组，生成一份对应的接入指引。</p>
+    </div>
+    <div class="ft-connection__sheet">
+      <div class="ft-connection__controls">
+        <div class="ft-connection__select">
+          <label for="ft-connection-client"><span aria-hidden="true">01</span> <span data-ft-connection-text="客户端">客户端</span></label>
+          <select id="ft-connection-client" data-ft-connection-client>
+            <option value="opencode">OpenCode</option>
+            <option value="cline">Cline</option>
+            <option value="roo">Roo Code</option>
+            <option value="workbuddy">WorkBuddy</option>
+            <option value="zed">Zed</option>
+            <option value="cursor">Cursor</option>
+          </select>
+        </div>
+        <div class="ft-connection__select">
+          <label for="ft-connection-group"><span aria-hidden="true">02</span> <span data-ft-connection-text="查看分组">查看分组</span></label>
+          <select id="ft-connection-group" data-ft-connection-group aria-describedby="ft-connection-group-note">
+            <option value="smart" data-ft-connection-text="智能API">智能API</option>
+            <option value="default" data-ft-connection-text="普通组">普通组</option>
+            <option value="vip" data-ft-connection-text="官方组">官方组</option>
+          </select>
+        </div>
+        <p class="ft-connection__scope" id="ft-connection-group-note" data-ft-connection-text="这里只切换配置说明。实际可用分组由你在控制台创建的 API Key 决定。">这里只切换配置说明。实际可用分组由你在控制台创建的 API Key 决定。</p>
+      </div>
+      <div class="ft-connection__body">
+        <div class="ft-connection__details">
+          <p class="ft-connection__selection" data-ft-connection-selection>OpenCode / 智能API</p>
+          <dl class="ft-connection__fields">
+            <div><dt data-ft-connection-endpoint-label>Base URL</dt><dd><code data-ft-connection-endpoint>https://www.flowstoken.com/v1</code></dd></div>
+            <div><dt data-ft-connection-text="模型名称">模型名称</dt><dd><code data-ft-connection-model>Bestoo-Auto</code></dd></div>
+          </dl>
+          <p class="ft-connection__model-help" data-ft-connection-model-help data-ft-connection-text="请使用智能API组的 Key，模型名称填写 Bestoo-Auto。">请使用智能API组的 Key，模型名称填写 Bestoo-Auto。</p>
+          <div class="ft-connection__condition">
+            <span class="ft-connection__condition-mark" aria-hidden="true">i</span>
+            <p data-ft-connection-caution data-ft-connection-text="此模板使用 Chat Completions。工具调用、图片与上下文上限以实际模型能力为准；需要 Responses API 的模型应另用对应配置。">此模板使用 Chat Completions。工具调用、图片与上下文上限以实际模型能力为准；需要 Responses API 的模型应另用对应配置。</p>
+          </div>
+          <div class="ft-connection__links">
+            <a href="/docs/clients#agents" data-ft-connection-guide data-ft-connection-text="查看接入教程">查看接入教程</a>
+            <a href="/pricing?group=smart" data-ft-connection-models data-ft-connection-text="查看该组模型">查看该组模型</a>
+          </div>
+        </div>
+        <div class="ft-connection__output">
+          <div class="ft-connection__output-head">
+            <span data-ft-connection-format>opencode.json</span>
+            <button type="button" class="ft-connection__copy" data-ft-connection-copy disabled><span data-ft-connection-copy-label data-ft-connection-text="复制配置">复制配置</span><span aria-hidden="true">↗</span></button>
+          </div>
+          <pre tabindex="0" aria-label="接入配置，需替换密钥占位符" data-ft-connection-output>Base URL: https://www.flowstoken.com/v1
+API Key: YOUR_API_KEY
+Model: Bestoo-Auto</pre>
+          <p class="ft-connection__placeholder" data-ft-connection-text="YOUR_API_KEY 是占位符，请在本地客户端替换。无需在此页面输入密钥。">YOUR_API_KEY 是占位符，请在本地客户端替换。无需在此页面输入密钥。</p>
+          <p class="ft-connection__feedback" role="status" aria-live="polite" aria-atomic="true" data-ft-connection-feedback></p>
+        </div>
+      </div>
+    </div>
+    <noscript><p class="ft-connection__no-script">交互配置需要 JavaScript。请查看 <a href="/docs/clients">客户端接入教程 / Client setup guide</a>。</p></noscript>
+  </div>
+</section>
+
+
+      <!-- Pricing -->
       <section id="pricing" class="section">
         <div class="wrap">
-          <div class="section-heading">
-            <p class="eyebrow">原有模型服务 · 价格示例</p>
+          <div class="section-head">
+            <p class="eyebrow">价格示例 · USD / 1M tokens</p>
             <h2>透明计价，按量付费</h2>
-            <p>以下为普通组与官方组的模型参考价。智能API统一售价及接入方式请查看<a href="/smart-api#smart-pricing">智能API专页</a>。</p>
+            <p>以下为常用模型的参考价。完整清单与实时价格以控制台「模型广场」为准。</p>
+            <a class="more" href="/pricing">查看全部 <span data-live-count>292</span> 个模型价格 →</a>
           </div>
-          <p style="text-align:center;margin:0 0 1rem">创建 API 密钥时选择分组：普通组为双通道高可用线路（官方1~3折，支持智能故障容灾）；官方组为100%官方原生直连通道（原厂企业级网关专线直连，满血不降智，按官方原价 × 1.2 计费）。</p>
-          <div class="pricing-table-wrap">
-            <h3 style="text-align:center;margin:0 0 .75rem">普通组（双通道高可用 · 官方1-3折）</h3>
-            <table class="pricing-table">
-              <thead>
-                <tr>
-                  <th>模型</th>
-                  <th>输入</th>
-                  <th>输出</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td><code>gpt-6-astra</code></td><td>$1.2362 / 1M</td><td>$6.1812 / 1M</td></tr>
-                <tr><td><code>claude-fable-5-1</code></td><td>$3.3202 / 1M</td><td>$16.6009 / 1M</td></tr>
-                <tr><td><code>claude-fable-5</code></td><td>$3.3202 / 1M</td><td>$16.6009 / 1M</td></tr>
-                <tr><td><code>claude-opus-5</code></td><td>$1.6610 / 1M</td><td>$8.3051 / 1M</td></tr>
-                <tr><td><code>claude-sonnet-5</code></td><td>$0.6644 / 1M</td><td>$3.3220 / 1M</td></tr>
-                <tr><td><code>claude-sonnet-4-6</code></td><td>$1.0000 / 1M</td><td>$5.0000 / 1M</td></tr>
-                <tr><td><code>gpt-5.6-sol</code></td><td>$0.4945 / 1M</td><td>$2.9670 / 1M</td></tr>
-                <tr><td><code>gpt-5.6-terra</code></td><td>$0.2472 / 1M</td><td>$1.4835 / 1M</td></tr>
-                <tr><td><code>gpt-5.6-luna</code></td><td>$0.2472 / 1M</td><td>$1.4835 / 1M</td></tr>
-                <tr><td><code>gpt-5.5</code></td><td>$0.6181 / 1M</td><td>$3.7087 / 1M</td></tr>
-                <tr><td><code>deepseek-v4-pro</code></td><td>$0.41 / 1M</td><td>$1.23 / 1M</td></tr>
-                <tr><td><code>gpt-image-2</code></td><td colspan="2">$0.048 / 张</td></tr>
-</tbody>
-            </table>
-            <h3 style="text-align:center;margin:1.5rem 0 .75rem">官方组（100%官方原生通道 · 1.2x 官方直连）</h3>
-            <p style="text-align:center;margin:0 0 .75rem;opacity:.9">100% 官方原厂直连专线，满血零污染、不降智。模型 ID 与各厂商官方一致，按官方原价 × 1.2 计费。</p>
-            <table class="pricing-table">
-              <thead>
-                <tr>
-                  <th>模型（官方 ID）</th>
-                  <th>输入</th>
-                  <th>输出</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td><code>openai/gpt-6-astra</code></td><td>$12.00 / 1M</td><td>$60.00 / 1M</td></tr>
-                <tr><td><code>anthropic/claude-fable-5.1</code></td><td>$12.00 / 1M</td><td>$60.00 / 1M</td></tr>
-                <tr><td><code>anthropic/claude-fable-5</code></td><td>$12.00 / 1M</td><td>$60.00 / 1M</td></tr>
-                <tr><td><code>anthropic/claude-opus-5</code></td><td>$6.00 / 1M</td><td>$30.00 / 1M</td></tr>
-                <tr><td><code>anthropic/claude-sonnet-5</code></td><td>$2.40 / 1M</td><td>$12.00 / 1M</td></tr>
-<tr>
-                  <td><code>openai/gpt-5.6-sol</code></td>
-                  <td>$2.40 / 1M</td>
-                  <td>$12.00 / 1M</td>
-                </tr>
-<tr>
-                  <td><code>openai/gpt-5.6-terra</code></td>
-                  <td>$2.40 / 1M</td>
-                  <td>$14.40 / 1M</td>
-                </tr>
-<tr>
-                  <td><code>openai/gpt-5.6-luna</code></td>
-                  <td>$0.24 / 1M</td>
-                  <td>$1.44 / 1M</td>
-                </tr>
-<tr>
-                  <td><code>openai/gpt-5.5</code></td>
-                  <td>$6.00 / 1M</td>
-                  <td>$36.00 / 1M</td>
-                </tr>
-<tr>
-                  <td><code>deepseek/deepseek-v4-pro</code></td>
-                  <td>$0.792 / 1M</td>
-                  <td>$2.376 / 1M</td>
-                </tr>
-<tr>
-                  <td><code>anthropic/claude-opus-4.6</code></td>
-                  <td>$6.00 / 1M</td>
-                  <td>$30.00 / 1M</td>
-                </tr>
-<tr>
-                  <td><code>anthropic/claude-sonnet-4.6</code></td>
-                  <td>$3.60 / 1M</td>
-                  <td>$18.00 / 1M</td>
-                </tr>
-</tbody>
-            </table>
-            <p style="text-align:center;margin:1.25rem 0 .5rem;opacity:.85">官方组更多模型（节选；单位 USD / 1M tokens）</p>
-            <div style="overflow-x:auto">
-              <table style="width:100%;border-collapse:collapse;font-size:.92rem">
-                <thead><tr><th align="left">模型</th><th align="left">输入</th><th align="left">输出</th></tr></thead>
-                <tbody>
 
-<tr><td><code>alibaba/qwen3.8-max</code></td><td>$1.44</td><td>$7.20</td></tr>
-<tr><td><code>moonshotai/kimi-k3</code></td><td>$3.60</td><td>$18.00</td></tr>
-<tr><td><code>minimax/minimax-m3</code></td><td>$0.48</td><td>$1.92</td></tr>
-<tr><td><code>google/gemini-3.5-flash</code></td><td>$1.80</td><td>$10.80</td></tr>
-<tr><td><code>zai/glm-5.1</code></td><td>$1.68</td><td>$5.28</td></tr>
-<tr><td><code>alibaba/qwen3.5-plus</code></td><td>$0.48</td><td>$2.88</td></tr>
-<tr><td><code>zai/glm-5</code></td><td>$1.20</td><td>$3.84</td></tr>
-<tr><td><code>moonshotai/kimi-k2.5</code></td><td>$0.72</td><td>$3.60</td></tr>
-<tr><td><code>deepseek/deepseek-v3.2</code></td><td>$0.336</td><td>$0.504</td></tr>
-</tbody>
+          <div class="tabs" role="tablist" aria-label="分组">
+            <button type="button" role="tab" class="is-on" data-tab="std" aria-selected="true">普通组</button>
+            <button type="button" role="tab" data-tab="vip" aria-selected="false">官方组</button>
+          </div>
+
+          <div class="table-wrap">
+            <div class="table-note">
+              <span data-tab-panel="std" class="is-on">普通组 · 具名模型 · 按实际用量计费</span>
+              <span data-tab-panel="vip">官方组 · 官方模型 · 官方价 ×1.1 · 模型 ID 与厂商一致（以价格表为准）</span>
+              <code>/api/pricing</code>
+            </div>
+
+            <div data-tab-panel="std" class="is-on">
+              <table class="prices">
+                <thead><tr><th>模型</th><th>接口</th><th>输入</th><th><abbr title="命中提示词缓存的输入 token 单价">缓存读取</abbr></th><th>输出</th></tr></thead>
+                <tbody>
+                  <!-- ft-showcase:default -->
+                  <tr data-group="default" data-model="claude-fable-5-1"><td><code>claude-fable-5-1</code> <span class="model-tag is-discount" title="官方价的 36%">3.6折</span></td><td><span class="ep">OpenAI</span><span class="ep">Anthropic</span></td><td data-price="in">3.5880</td><td data-price="cache">0.0897</td><td data-price="out">17.9400</td></tr>
+                  <tr data-group="default" data-model="gpt-6-astra"><td><code>gpt-6-astra</code> <span class="model-tag is-discount" title="官方价的 13%">1.3折</span></td><td><span class="ep">OpenAI</span></td><td data-price="in">1.2350</td><td data-price="cache">0.1235</td><td data-price="out">6.1750</td></tr>
+                  <tr data-group="default" data-model="claude-opus-5-5"><td><code>claude-opus-5-5</code> <span class="model-tag is-discount" title="官方价的 32%">3.2折</span></td><td><span class="ep">OpenAI</span><span class="ep">Anthropic</span></td><td data-price="in">1.2480</td><td data-price="cache">0.0624</td><td data-price="out">6.2140</td></tr>
+                  <tr data-group="default" data-model="gpt-6.1-sol"><td><code>gpt-6.1-sol</code> <span class="model-tag is-discount" title="官方价的 13%">1.3折</span></td><td><span class="ep">OpenAI</span></td><td data-price="in">0.2470</td><td data-price="cache">0.0117</td><td data-price="out">1.2350</td></tr>
+                  <tr data-group="default" data-model="claude-sonnet-5-5"><td><code>claude-sonnet-5-5</code> <span class="model-tag is-discount" title="官方价的 32%">3.2折</span></td><td><span class="ep">OpenAI</span><span class="ep">Anthropic</span></td><td data-price="in">0.6240</td><td data-price="cache">0.0465</td><td data-price="out">3.1070</td></tr>
+                  <tr data-group="default" data-model="gpt-6-luna"><td><code>gpt-6-luna</code> <span class="model-tag is-discount" title="官方价的 13%">1.3折</span></td><td><span class="ep">OpenAI</span></td><td data-price="in">0.0117</td><td data-price="cache">0.0013</td><td data-price="out">0.0624</td></tr>
+                  <tr data-group="default" data-model="claude-haiku-4-5"><td><code>claude-haiku-4-5</code> <span class="model-tag is-discount" title="官方价的 32%">3.2折</span></td><td><span class="ep">OpenAI</span><span class="ep">Anthropic</span></td><td data-price="in">0.3120</td><td data-price="cache">0.0312</td><td data-price="out">1.5600</td></tr>
+                  <tr data-group="default" data-model="deepseek-v4.1-flash"><td><code>deepseek-v4.1-flash</code> <span class="model-tag is-discount" title="官方价的 87%">8.7折</span></td><td><span class="ep">OpenAI</span></td><td data-price="in">0.2600</td><td data-price="cache">0.0070</td><td data-price="out">0.7800</td></tr>
+                  <tr data-group="default" data-model="glm-5.3"><td><code>glm-5.3</code> <span class="model-tag is-discount" title="官方价的 68%">6.8折</span></td><td><span class="ep">OpenAI</span></td><td data-price="in">0.9493</td><td data-price="cache">0.1400</td><td data-price="out">2.9836</td></tr>
+                  <tr data-group="default" data-model="gpt-image-2"><td><code>gpt-image-2</code></td><td><span class="ep">Image-generation</span><span class="ep">OpenAI</span></td><td colspan="3" data-price="call">0.048 / 张 · 按次计费</td></tr>
+                  <!-- /ft-showcase:default -->
+                </tbody>
               </table>
             </div>
-            <p style="text-align:center;margin:.75rem 0 0;opacity:.75;font-size:.9rem">完整清单见控制台模型列表或 <code>/api/pricing</code> 的 <code>group_model_ratio.vip</code>。</p>
 
-          </div>
-          <div class="hero-actions" style="margin-top: 1.5rem; justify-content: center">
-            <a class="button secondary" href="/pricing">查看全部模型价格</a>
+            <div data-tab-panel="vip">
+              <table class="prices">
+                <thead><tr><th>模型（官方 ID）</th><th>标签</th><th>输入</th><th><abbr title="命中提示词缓存的输入 token 单价">缓存读取</abbr></th><th>输出</th></tr></thead>
+                <tbody>
+                  <!-- ft-showcase:vip -->
+                  <tr data-group="vip" data-model="anthropic/claude-fable-5.1"><td><code><span class="vendor">anthropic/</span>claude-fable-5.1</code></td><td><span class="ep">官方模型</span></td><td data-price="in">11.00</td><td data-price="cache">0.275</td><td data-price="out">55.00</td></tr>
+                  <tr data-group="vip" data-model="openai/gpt-6-astra"><td><code><span class="vendor">openai/</span>gpt-6-astra</code></td><td><span class="ep">官方模型</span></td><td data-price="in">11.00</td><td data-price="cache">1.10</td><td data-price="out">55.00</td></tr>
+                  <tr data-group="vip" data-model="anthropic/claude-opus-5.5"><td><code><span class="vendor">anthropic/</span>claude-opus-5.5</code></td><td><span class="ep">官方模型</span><span class="ep">旗舰性能</span></td><td data-price="in">4.40</td><td data-price="cache">0.22</td><td data-price="out">22.00</td></tr>
+                  <tr data-group="vip" data-model="openai/gpt-6.1-sol"><td><code><span class="vendor">openai/</span>gpt-6.1-sol</code></td><td><span class="ep">官方模型</span><span class="ep">旗舰性能</span></td><td data-price="in">2.20</td><td data-price="cache">0.11</td><td data-price="out">11.00</td></tr>
+                  <tr data-group="vip" data-model="anthropic/claude-sonnet-5.5"><td><code><span class="vendor">anthropic/</span>claude-sonnet-5.5</code></td><td><span class="ep">官方模型</span></td><td data-price="in">2.20</td><td data-price="cache">0.11</td><td data-price="out">11.00</td></tr>
+                  <tr data-group="vip" data-model="openai/gpt-6-luna"><td><code><span class="vendor">openai/</span>gpt-6-luna</code></td><td><span class="ep">官方模型</span></td><td data-price="in">0.11</td><td data-price="cache">0.011</td><td data-price="out">0.55</td></tr>
+                  <tr data-group="vip" data-model="google/gemini-3.8-flash"><td><code><span class="vendor">google/</span>gemini-3.8-flash</code></td><td><span class="ep">官方模型</span><span class="ep">极速轻量</span></td><td data-price="in">0.825</td><td data-price="cache">0.0825</td><td data-price="out">4.125</td></tr>
+                  <tr data-group="vip" data-model="deepseek/deepseek-v4-pro"><td><code><span class="vendor">deepseek/</span>deepseek-v4-pro</code></td><td><span class="ep">官方模型</span><span class="ep">旗舰性能</span></td><td data-price="in">0.726</td><td data-price="cache">0.0242</td><td data-price="out">2.178</td></tr>
+                  <tr data-group="vip" data-model="deepseek/deepseek-v4.1-flash"><td><code><span class="vendor">deepseek/</span>deepseek-v4.1-flash</code></td><td><span class="ep">官方模型</span><span class="ep">极速轻量</span></td><td data-price="in">0.33</td><td data-price="cache">0.0077</td><td data-price="out">1.32</td></tr>
+                  <tr data-group="vip" data-model="alibaba/qwen3.8-max"><td><code><span class="vendor">alibaba/</span>qwen3.8-max</code></td><td><span class="ep">官方模型</span><span class="ep">旗舰性能</span></td><td data-price="in">2.20</td><td data-price="cache">0.275</td><td data-price="out">6.60</td></tr>
+                  <tr data-group="vip" data-model="moonshotai/kimi-k3"><td><code><span class="vendor">moonshotai/</span>kimi-k3</code></td><td><span class="ep">官方模型</span></td><td data-price="in">3.30</td><td data-price="cache">0.33</td><td data-price="out">16.50</td></tr>
+                  <tr data-group="vip" data-model="zai/glm-5.3"><td><code><span class="vendor">zai/</span>glm-5.3</code></td><td><span class="ep">官方模型</span></td><td data-price="in">1.54</td><td data-price="cache">0.154</td><td data-price="out">4.84</td></tr>
+                  <!-- /ft-showcase:vip -->
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-foot">
+              <span data-live-note>价格随上游调整，以控制台实时显示为准。缓存读取为命中提示词缓存时的输入单价。</span>
+              <a class="btn btn-outline" href="/pricing">模型广场</a>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- Steps -->
       <section id="how" class="section section-alt">
         <div class="wrap">
-          <div class="section-heading">
+          <div class="section-head">
             <p class="eyebrow">三步开始</p>
-            <h2>使用流程</h2>
-            <p>无需复杂审批，注册后即可自助完成充值与调用。</p>
+            <h2>从这里，开始你的第一个请求。</h2>
+            <p>创建账号与对应分组的密钥，按客户端教程填写地址和模型名，即可开始接入。</p>
           </div>
+
           <div class="steps">
-            <article class="step">
-              <span class="step-num">01</span>
-              <h3>注册账号</h3>
-              <p>使用用户名与邮箱注册，验证邮箱后即可登录控制台。</p>
-              <a class="button ghost" href="/register">去注册</a>
-            </article>
-            <article class="step">
-              <span class="step-num">02</span>
-              <h3>充值额度</h3>
-              <p>在控制台选择金额完成支付。中国客户可用微信支付、银行卡及 Apple Pay / Google Pay；其他地区支持银行卡与 Apple Pay / Google Pay 等。到账后即可调用。</p>
-              <a class="button ghost" href="/console/topup">去充值</a>
-            </article>
-            <article class="step">
-              <span class="step-num">03</span>
-              <h3>创建密钥并调用</h3>
-              <p>生成 API Key，将 Base URL 指向本站，即可用现有 SDK / 客户端调用。详细步骤见接入文档。</p>
-              <a class="button ghost" href="/console/token">管理密钥</a>
-              <a class="button ghost" href="/docs">配置教程</a>
-            </article>
+            <div class="step-list">
+              <article class="step">
+                <span class="step-num">01</span>
+                <div>
+                  <h3>注册账号</h3>
+                  <p>用户名与邮箱即可注册，登录后进入控制台。</p>
+                  <div class="links"><a href="/register">去注册 →</a></div>
+                </div>
+              </article>
+              <article class="step">
+                <span class="step-num">02</span>
+                <div>
+                  <h3>充值额度</h3>
+                  <p>在控制台选择金额完成支付。支持支付宝、微信支付、Visa / Mastercard / 银联、Apple Pay / Google Pay。支付成功后额度自动到账。充值满 $100 赠 5%、满 $500 赠 10%、满 $1,000 赠 15%，支付确认后自动到账。</p>
+                  <div class="links"><a href="/console/topup">去充值 →</a></div>
+                </div>
+              </article>
+              <article class="step">
+                <span class="step-num">03</span>
+                <div>
+                  <h3>创建密钥，替换 Base URL</h3>
+                  <p>创建密钥时选择分组。把 SDK 的 <code>base_url</code> 指向本站，模型名填 <code>Bestoo-Auto</code> 或具名模型。</p>
+                  <div class="links"><a href="/console/token">管理密钥 →</a><a href="/docs">配置教程 →</a></div>
+                </div>
+              </article>
+            </div>
+
+            <div class="code" data-code>
+              <div class="code-head" role="tablist">
+                <button type="button" class="is-on" data-code-tab="py">Python</button>
+                <button type="button" data-code-tab="js">Node.js</button>
+                <button type="button" data-code-tab="sh">curl</button>
+                <button class="copy" type="button" data-copy-code aria-label="复制代码">复制</button>
+              </div>
+<pre data-code-panel="py" class="is-on"><span class="c"># pip install openai</span>
+<span class="k">from</span> openai <span class="k">import</span> OpenAI
+
+client = OpenAI(
+    base_url=<span class="s">"https://www.flowstoken.com/v1"</span>,
+    api_key=<span class="s">"sk-..."</span>,
+)
+
+r = client.chat.completions.create(
+    model=<span class="s">"Bestoo-Auto"</span>,
+    messages=[{<span class="s">"role"</span>: <span class="s">"user"</span>, <span class="s">"content"</span>: <span class="s">"用 Python 写一个 LRU 缓存"</span>}],
+)
+print(r.choices[0].message.content)</pre>
+<pre data-code-panel="js"><span class="c">// npm i openai</span>
+<span class="k">import</span> OpenAI <span class="k">from</span> <span class="s">"openai"</span>;
+
+<span class="k">const</span> client = <span class="k">new</span> OpenAI({
+  baseURL: <span class="s">"https://www.flowstoken.com/v1"</span>,
+  apiKey: <span class="s">"sk-..."</span>,
+});
+
+<span class="k">const</span> r = <span class="k">await</span> client.chat.completions.create({
+  model: <span class="s">"Bestoo-Auto"</span>,
+  messages: [{ role: <span class="s">"user"</span>, content: <span class="s">"用 Python 写一个 LRU 缓存"</span> }],
+});
+console.log(r.choices[0].message.content);</pre>
+<pre data-code-panel="sh">curl https://www.flowstoken.com/v1/chat/completions \
+  -H <span class="s">"Authorization: Bearer sk-..."</span> \
+  -H <span class="s">"Content-Type: application/json"</span> \
+  -d <span class="s">'{
+    "model": "Bestoo-Auto",
+    "messages": [{"role": "user", "content": "用 Python 写一个 LRU 缓存"}]
+  }'</span></pre>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section ft-confidence" aria-labelledby="confidence-title"><div class="wrap">
+        <div class="section-head"><p class="eyebrow">让每一步都更清楚</p><h2 id="confidence-title">接入轻一点，使用安心一点。</h2></div>
+        <div class="ft-confidence-grid">
+          <article><span class="ft-feature-index">01 / CONTROL</span><h3>一个项目，一把密钥</h3><p>为不同项目分别创建令牌，按需设置额度、有效期与 IP 限制，方便管理和撤销。</p><a href="/console/token">管理项目密钥 <span aria-hidden="true">↗</span></a></article>
+          <article><span class="ft-feature-index">02 / CLARITY</span><h3>价格看得见，用量查得到</h3><p>先看模型价格，再按实际用量付费。消费记录留在控制台，方便核对每个项目的使用。</p><a href="/console/log">查看使用记录 <span aria-hidden="true">↗</span></a></article>
+          <article><span class="ft-feature-index">03 / SUPPORT</span><h3>遇到问题，有清晰的下一步</h3><p>从地址、模型名到分组匹配，接入教程帮你排查常见错误，也可以直接联系技术支持。</p><a href="/docs/quickstart">查看常见问题 <span aria-hidden="true">↗</span></a><a href="/status">查看服务状态 <span aria-hidden="true">↗</span></a></article>
+        </div>
+      </div></section>
+      <section class="section ft-faq" aria-labelledby="faq-title"><div class="wrap ft-faq-layout"><div><p class="eyebrow">开始之前</p><h2 id="faq-title">你可能还想知道。</h2><p>把选择弄清楚，再开始构建。</p><a class="more" href="/docs">打开完整接入文档 →</a></div><div>
+        <details><summary>第一次使用，应该选哪个分组？</summary><p>想让平台按任务选模，可以从智能API组开始；已有明确模型偏好、关注价格，可以选普通组；需要指定官方型号，可以选官方组。三组各有用途，先用小任务验证是否适合你的工作流。</p></details>
+        <details><summary>换分组，需要换接入地址吗？</summary><p>平台使用统一入口。创建密钥时选择对应分组，客户端填写该组可用的模型名。不同客户端的地址格式可能不同，请以接入助手和教程为准。</p></details>
+        <details><summary>智能API一定更便宜吗？</summary><p>不一定。智能API组提供自动选模和统一单价，实际账单取决于计费 Token 用量。若你已选好低价模型，普通组可能更合适；请按具体型号和实际用量比较。</p></details>
+        <details><summary>客户端的所有功能都可以使用吗？</summary><p>支持范围取决于客户端版本、协议和模型能力。例如 Cursor 的自带密钥不覆盖 Tab 等全部功能。请先查看对应客户端的适配说明。</p></details>
+      </div></div></section>
+
+      <!-- Trust -->
+      <section class="trust">
         <div class="wrap">
-          <div class="section-heading">
-            <p class="eyebrow">为什么选择我们</p>
-            <h2>为开发者准备的智能API入口</h2>
+          <div>
+            <p class="eyebrow">运营与支付</p>
+            <h2>由美国公司 Bestoo Service LLC 运营</h2>
+            <p>预付费额度服务，充值经 Stripe 合规支付通道处理。中国客户可用支付宝、微信支付与银联/银行卡；其他地区支持 Visa / Mastercard 与 Apple Pay / Google Pay。所有模型价格公开，控制台可查每一笔消费明细。</p>
+            <div class="pay" aria-label="支持的支付方式">
+              <span><img src="/brand/pay-icons/alipay.svg" alt="" />支付宝</span>
+              <span><img src="/brand/pay-icons/wechat-pay.png?v=20260914" alt="" />微信支付</span>
+              <span><img src="/brand/pay-icons/unionpay.svg" alt="" />银联</span>
+              <span><img src="/brand/pay-icons/visa.svg" alt="" />Visa</span>
+              <span><img src="/brand/pay-icons/mastercard.svg" alt="" />Mastercard</span>
+              <span><img src="/brand/pay-icons/apple-pay.svg" alt="" />Apple Pay</span>
+              <span><img src="/brand/pay-icons/google-pay.svg" alt="" />Google Pay</span>
+            </div>
           </div>
-          <div class="feature-row">
-            <article>
-              <h3>协议兼容</h3>
-              <p>同时支持 OpenAI 与 Anthropic 风格接口，主流客户端改 Base URL 即可用。</p>
-            </article>
-            <article>
-              <h3>自助管理</h3>
-              <p>密钥、余额、消费日志集中在控制台，随时查看用量与明细。</p>
-            </article>
-            <article>
-              <h3>按量扣费</h3>
-              <p>预付费额度，用多少扣多少；模型价格公开可查。</p>
-            </article>
+          <div class="trust-stats">
+            <div><strong>2</strong><span>种协议：OpenAI 与 Anthropic 兼容</span></div>
+            <div><strong data-live-count>292</strong><span>个模型可用，三种分组</span></div>
+            <div><strong>7×24</strong><span>客服与技术支持</span></div>
+            <div><strong>0</strong><span>最低消费，用多少扣多少</span></div>
           </div>
         </div>
       </section>
 
-      <section class="contact-band">
+      <!-- Support -->
+      <section class="support">
         <div class="wrap">
-          <div class="section-heading">
+          <div class="section-head">
             <p class="eyebrow">支持</p>
-            <h2>需要帮助？</h2>
-            <p>账号、充值、调用问题都可以通过以下渠道联系我们。</p>
+            <h2>从接入到使用，都有人帮你。</h2>
+            <p>配置遇到问题？附上客户端名称、错误信息与请求 ID，我们一起定位。请勿发送完整密钥。</p>
           </div>
-          <div class="contact-cards">
-            <a class="contact-card" href="mailto:chowjack2098@gmail.com">
-              <span class="contact-logo"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.6" y="5.2" width="18.8" height="13.6" rx="2.4" stroke="#60A5FA" stroke-width="1.7"/><path d="M3.8 7.3 12 13.1l8.2-5.8" stroke="#60A5FA" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              <span class="contact-meta">
-                <strong>chowjack2098@gmail.com</strong>
-              </span>
+          <div class="support-grid">
+            <a class="contact" href="mailto:chowjack2098@gmail.com">
+              <span class="ico"><img src="/brand/contact-icons/email.svg?v=20260914" alt="" /></span>
+              <span><small>邮箱</small><strong>chowjack2098@gmail.com</strong></span>
             </a>
-            <a class="contact-card" href="https://t.me/usa519" target="_blank" rel="noopener">
-              <span class="contact-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#2AABEE"/><path fill="#fff" d="M16.84 8.16 15.2 16.1c-.12.54-.44.67-.9.42l-2.48-1.83-1.2 1.15c-.13.13-.24.24-.5.24l.18-2.52 4.6-4.15c.2-.18-.04-.28-.31-.1l-5.7 3.58-2.45-.77c-.53-.16-.54-.53.11-.78l9.56-3.69c.44-.16.83.11.69.75z"/></svg></span>
-              <span class="contact-meta">
-                <strong>@usa519</strong>
-              </span>
+            <a class="contact" href="https://t.me/usa519" target="_blank" rel="noopener">
+              <span class="ico"><img src="/brand/contact-icons/telegram.svg?v=20260914" alt="" /></span>
+              <span><small>Telegram</small><strong>@usa519</strong></span>
             </a>
-                        <a class="contact-card" href="https://wpa.qq.com/msgrd?v=3&uin=3901106499&site=qq&menu=yes" target="_blank" rel="noopener">
-              <span class="contact-logo contact-logo-qq"><img src="/brand/contact-icons/qq.svg?v=20260903s" width="24" height="24" alt="QQ" /></span>
-              <span class="contact-meta">
-                <strong>3901106499</strong>
-              </span>
+            <a class="contact" href="https://wa.me/19192131199" target="_blank" rel="noopener">
+              <span class="ico"><img src="/brand/contact-icons/whatsapp.svg?v=20260914" alt="" /></span>
+              <span><small>WhatsApp / 电话</small><strong>+1 919 213 1199</strong></span>
             </a>
-            <a class="contact-card" href="https://wa.me/19192131199" target="_blank" rel="noopener">
-              <span class="contact-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M12 2.1C6.55 2.1 2.1 6.46 2.1 11.8c0 1.72.46 3.4 1.34 4.86L2 21.9l5.4-1.42A9.86 9.86 0 0 0 12 21.9c5.45 0 9.9-4.36 9.9-9.7S17.45 2.1 12 2.1z"/><path fill="#fff" d="M16.62 14.28c-.22-.11-1.28-.63-1.48-.7-.2-.08-.34-.11-.49.11l-.7.86c-.13.14-.27.16-.5.05-.27-.13-1.12-.41-2.14-1.32-.79-.7-1.32-1.56-1.48-1.83-.15-.26-.02-.4.1-.53l.37-.43c.1-.12.13-.27.2-.4.06-.13.03-.25 0-.36l-.74-1.76c-.19-.46-.39-.5-.53-.51h-.44c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.51 2.41.94 2.41.63 2.85.59.43-.04 1.4-.57 1.6-1.12.2-.55.2-.99.14-1.09z"/></svg></span>
-              <span class="contact-meta">
-                <strong>+1 919 213 1199</strong>
-              </span>
+            <a class="contact" href="https://wpa.qq.com/msgrd?v=3&uin=3901106499&site=qq&menu=yes" target="_blank" rel="noopener">
+              <span class="ico"><img src="/brand/contact-icons/qq.png?v=20260914" alt="" /></span>
+              <span><small>QQ</small><strong>3901106499</strong></span>
             </a>
           </div>
         </div>
@@ -386,31 +511,36 @@
     <footer class="site-footer">
       <div class="wrap footer-grid">
         <div class="footer-brand">
-                    <a class="brand footer-brand-link" href="/" aria-label="FlowsToken">
-            <img class="brand-icon" src="/brand/logo-icon.png?v=20260904logo" width="32" height="32" alt="" decoding="async" />
-            <span class="brand-word" aria-label="FlowsToken">
-              <span class="brand-flows">Flows</span><span class="brand-token">Token</span>
-            </span>
+          <a class="brand" href="/" aria-label="FlowsToken">
+            <img class="brand-mark" src="/brand/logo-mark.png?v=20260915g" alt="" width="46" height="26" />
+            <span class="brand-word">Flows<b>Token</b></span>
           </a>
-          <p>智能选模，一个入口 · 未来的选择 · 预付费按量计费</p>
+          <p>智能选模，一个入口。高端任务按需升档；OpenAI / Anthropic 兼容 API，预付费按量计费。</p>
+          <p class="addr">Bestoo Service LLC<br />30 N Gould St Ste N, Sheridan, WY 82801, US</p>
         </div>
         <div>
           <h4>产品</h4>
           <nav>
             <a href="/smart-api">智能API</a>
-            <a href="/pricing">模型价格</a>
+            <a href="/desktop">桌面端</a>
+            <a href="/mobile">移动端</a>
+            <a href="/pricing">模型广场</a>
             <a href="/docs">配置教程</a>
-            <a href="/register">注册</a>
-            <a href="/login">登录</a>
+            <a href="/console/token">密钥管理</a>
             <a href="/console/topup">充值</a>
           </nav>
         </div>
         <div>
-          <h4>支持与合规</h4>
+          <h4>公司</h4>
           <nav>
-            <a href="/announce.html">公告</a>
             <a href="/about.html">关于我们</a>
+            <a href="/announce.html">公告</a>
             <a href="/contact.html">联系我们</a>
+          </nav>
+        </div>
+        <div>
+          <h4>法律</h4>
+          <nav>
             <a href="/legal">法律中心</a>
             <a href="/privacy.html">隐私政策</a>
             <a href="/terms.html">服务条款</a>
@@ -419,31 +549,20 @@
           </nav>
         </div>
       </div>
-            <div class="wrap footer-bottom">
-        <div class="footer-bottom-row" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.25rem; width: 100%;">
-          <div class="footer-company-info">
-            <p style="margin: 0; font-weight: 600; color: #fff; font-size: 0.95rem; letter-spacing: 0.01em;">© 2026 Bestoo Service LLC. All rights reserved.</p>
-            <p class="footer-address" style="margin: 0.35rem 0 0; color: var(--muted); font-size: 0.85rem;">30 N Gould St Ste N, Sheridan, WY 82801, United States</p>
-          </div>
-          <div class="footer-contact-inline" style="display: flex; flex-direction: column; gap: 0.35rem; align-items: flex-end; text-align: right;">
-            <div style="font-weight: 600; font-size: 0.86rem; color: #e2e8f0; display: flex; align-items: center; gap: 7px;">
-              <span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #10b981; box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);"></span>
-              客服与技术支持（7×24小时服务）
-            </div>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-size: 0.83rem; color: #94a3b8; justify-content: flex-end;">
-              <span>客服邮箱：<a href="mailto:chowjack2098@gmail.com" style="color: #60a5fa; text-decoration: none;">chowjack2098@gmail.com</a></span>
-              <span>客服电话 / WhatsApp：<a href="tel:+19192131199" style="color: #60a5fa; text-decoration: none;">+1 919 213 1199</a></span>
-              <span>在线客服：<a href="https://t.me/usa519" target="_blank" rel="noopener" style="color: #60a5fa; text-decoration: none;">Telegram @usa519</a></span>
-            </div>
-          </div>
+      <div class="wrap">
+        <div class="footer-bottom">
+          <span>© 2026 Bestoo Service LLC. All rights reserved.</span>
+          <span class="status">客服与技术支持 7×24 · <a href="mailto:chowjack2098@gmail.com">chowjack2098@gmail.com</a> · <a href="tel:+19192131199">+1 919 213 1199</a></span>
         </div>
-        <p class="footer-mor">
-          FlowsToken 由美国公司 Bestoo Service LLC 运营。充值支付经合规支付通道处理；服务与额度由本公司提供与支持。
-        </p>
-        <p class="footer-disclaimer" style="font-size: 12px; color: #888; margin-top: 8px; line-height: 1.6;">
-          免责声明：FlowsToken / Bestoo 为第三方技术平台，与 Anthropic、OpenAI、Google 等大模型厂商无任何从属、授权或直接关联关系。本平台提及的所有品牌、商标及服务标志均归其各自所有者所有。
+        <p class="footer-legal">
+          FlowsToken / Bestoo 为第三方技术平台，与 OpenAI、Anthropic、Google 等模型厂商无从属、授权或直接关联关系。文中提及的品牌与商标归各自所有者所有。充值支付经合规支付通道处理，服务与额度由本公司提供与支持。
         </p>
       </div>
     </footer>
+
+    <script src="/assets/site.js" defer></script>
+    <script src="/brand/home-auth-nav.js?v=20260914a&ftlangv=20261001en2" defer></script>
+  <script src="/assets/connection-guide.js?v=20261004a" defer></script>
+  <script src="/assets/home-pricing.js?v=discount-20261006" defer></script>
   </body>
 </html>
