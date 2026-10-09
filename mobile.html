@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>移动端｜FlowsToken Mobile — 桌面关机也能聊</title>
+    <meta name="description" content="FlowsToken 手机端：直连模式登录账号即可对话，桌面关机也能用；配对桌面后解锁远程会话、工具与文件。提供 iOS（TestFlight）与 Android（APK）。" />
+    <meta name="theme-color" content="#fbfbf9" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://www.flowstoken.com/mobile" />
+    <link rel="icon" href="/brand/favicon.png?v=20260915g" type="image/png" />
+    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png?v=20260915g" />
+    <link rel="stylesheet" href="/assets/fonts.css?v=20260915" />
+    <link rel="stylesheet" href="/assets/site.css" />
+    <style>
+      .dl-grid { margin-top: 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      .dl-card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 22px 20px; display: flex; flex-direction: column; gap: 10px; }
+      .dl-card h3 { font-size: 18px; letter-spacing: -0.02em; }
+      .dl-card p { color: var(--ink-2); font-size: 14px; line-height: 1.55; flex: 1; }
+      .dl-note { margin-top: 14px; font-size: 13.5px; color: var(--ink-3); }
+      .steps { margin-top: 36px; display: grid; gap: 12px; }
+      .step { display: grid; grid-template-columns: 42px 1fr; gap: 14px; align-items: start; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px; }
+      .step-num { width: 42px; height: 42px; border-radius: 10px; background: var(--paper-2); border: 1px solid var(--line); display: grid; place-items: center; font-family: var(--mono); font-size: 14px; color: var(--ink-2); }
+      .step h3 { font-size: 16px; margin-bottom: 4px; }
+      .step p { color: var(--ink-2); font-size: 14.5px; line-height: 1.55; }
+      .mode-grid { margin-top: 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      @media (max-width: 860px) {
+        .dl-grid, .mode-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <div class="announce" role="region" aria-label="公告">
+      <div class="wrap">
+        <span class="tag">公告</span>
+        <span class="announce-msgs">
+          <span class="announce-msg is-on">官方组主流型号已按官方原价销售，模型 ID 与厂商一致。</span>
+          <span class="announce-msg">支付宝、微信支付、银行卡充值已全部开通，实时到账。</span>
+          <span class="announce-msg">普通组 <code>gpt-5.6-luna</code> 降价至 $0.0247 / 1M。</span>
+        </span>
+        <a href="/announce.html">查看公告</a>
+      </div>
+    </div>
+
+    <header class="site-header" data-header>
+      <div class="wrap">
+        <a class="brand" href="/" aria-label="FlowsToken 首页">
+          <img class="brand-mark" src="/brand/logo-mark.png?v=20260915g" alt="" width="46" height="26" />
+          <span class="brand-word">Flows<b>Token</b></span>
+        </a>
+
+        <nav class="site-nav" aria-label="主导航" data-nav>
+          <a href="/" data-nav="home">首页</a>
+          <a href="/smart-api" data-nav="smart-api">智能API</a>
+          <a href="/desktop" data-nav="desktop">桌面端</a>
+          <a href="/mobile" data-nav="mobile" class="is-current">移动端</a>
+          <a href="/#groups" data-nav="groups">分组与价格</a>
+          <a href="/pricing" data-nav="pricing">模型广场</a>
+          <a href="/docs" data-nav="docs">配置教程</a>
+          <a href="/announce.html" data-nav="announce">公告</a>
+          <a href="/about.html" data-nav="about">关于</a>
+          <a href="/contact.html" data-nav="contact">联系</a>
+        </nav>
+
+        <div class="header-tools">
+          <a class="btn btn-ghost nav-login" href="/login">登录</a>
+          <a class="btn btn-primary nav-cta" href="/register">注册</a>
+          <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false" data-nav-toggle><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap">
+          <div>
+            <p class="eyebrow">FlowsToken · Mobile</p>
+            <h1>手机上的 FlowsToken，<br /><em>桌面关机也能聊。</em></h1>
+            <p class="hero-lede">直连模式登录账号即可对话，走你的分组与模型目录；配对桌面后还能远程盯会话、回消息、跑工具。</p>
+            <p class="hero-lede" style="font-size:15px">两种模式可共存：<strong>直连会话</strong>完全在手机上运行，桌面离线照常使用；<strong>配对会话</strong>连接桌面客户端，解锁完整 Agent 能力。</p>
+            <div class="hero-actions">
+              <a class="btn btn-accent btn-lg" href="#download">查看下载 <span class="arrow">↓</span></a>
+              <a class="btn btn-outline btn-lg" href="#guide">使用说明</a>
+            </div>
+            <p class="keyline"><span class="status"></span>iOS（TestFlight）<span>·</span> Android（APK）<span>·</span> 官方安装包</p>
+          </div>
+
+          <aside class="receipt" aria-label="Mobile 双模式示意">
+            <div class="receipt-head">
+              <span>同一账户</span>
+              <span>两种模式</span>
+            </div>
+            <div class="flow">
+              <div class="flow-chips"><span>登录账号</span><span>直连聊天</span><span>无需桌面</span></div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+              <div class="flow-hub">
+                <div><strong>FlowsToken Mobile</strong><code>直连 / 配对双模式</code></div>
+                <span class="pill">手机客户端</span>
+              </div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+              <div class="flow-split">
+                <div><span>直连模式</span><strong>桌面关机可用</strong></div>
+                <div><span>配对模式</span><strong>桌面全能力</strong></div>
+              </div>
+              <div class="flow-result">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div><strong>分组与计费不变</strong><span>用量仍走你的 FlowsToken 账户</span></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="strip">
+        <div class="wrap">
+          <p>直连打底、配对增强，<strong>一个 App 两种用法。</strong></p>
+          <a class="more" href="#guide">了解使用方式 ↓</a>
+        </div>
+      </section>
+
+      <section class="section" id="download">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">下载</p>
+            <h2>iOS 与 Android 均已可装。</h2>
+            <p>iOS 走 TestFlight 公测通道；Android 直接下载官方签名 APK。登录同一个 FlowsToken 账户，分组与额度与桌面端一致。</p>
+          </div>
+          <div class="dl-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:20px;align-items:stretch;">
+            <!-- iOS Card -->
+            <article class="dl-card" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:16px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+              <div>
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+                  <span style="font-size:12px;font-weight:700;color:#0284c7;background:#e0f2fe;padding:2px 10px;border-radius:20px;">公测 · iOS</span>
+                  <span style="font-size:12px;color:#64748b;">v0.7.1</span>
+                </div>
+                <h3 style="font-size:20px;font-weight:700;color:#0f172a;margin:0 0 8px 0;">iPhone / iPad</h3>
+                <p style="color:#475569;font-size:13.5px;line-height:1.55;margin-bottom:16px;">
+                  通过 Apple TestFlight 安装公测版，支持直连聊天与桌面配对两种模式。
+                </p>
+                <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px;">
+                  <a class="btn btn-accent" style="text-align:center;padding:11px 14px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:6px;" href="https://testflight.apple.com/join/Fae1Rapm" target="_blank" rel="noopener">
+                    <span>🍎 加入 TestFlight 公测</span>
+                  </a>
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <div style="background:#f8fafc;border:1px solid #cbd5e1;border-radius:10px;padding:12px;font-size:12px;line-height:1.55;color:#334155;">
+                  <strong style="color:#0f172a;display:block;margin-bottom:4px;">💡 安装步骤</strong>
+                  1. 点击上方按钮，按提示安装 TestFlight（如未装过）<br/>
+                  2. 在 TestFlight 中接受邀请并安装 FlowsToken<br/>
+                  3. 若提示「暂不可用」，说明公测审核进行中，稍后重试即可
+                </div>
+              </div>
+            </article>
+
+            <!-- Android Card -->
+            <article class="dl-card" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:16px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+              <div>
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+                  <span style="font-size:12px;font-weight:700;color:#16a34a;background:#dcfce7;padding:2px 10px;border-radius:20px;">推荐 · Android</span>
+                  <span style="font-size:12px;color:#64748b;">v0.7.1</span>
+                </div>
+                <h3 style="font-size:20px;font-weight:700;color:#0f172a;margin:0 0 8px 0;">Android</h3>
+                <p style="color:#475569;font-size:13.5px;line-height:1.55;margin-bottom:16px;">
+                  官方签名 APK 直接下载安装，Android 7.0 及以上系统可用。
+                </p>
+                <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px;">
+                  <a class="btn btn-accent" style="text-align:center;padding:11px 14px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:6px;" href="https://github.com/Jacker2099/flowstoken-desktop/releases/latest/download/FlowsToken-0.7.1.apk" target="_blank" rel="noopener">
+                    <span>🤖 下载 Android 安装包 (.apk)</span>
+                    <span style="font-size:11px;background:rgba(255,255,255,0.25);padding:1px 6px;border-radius:4px;">直链</span>
+                  </a>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:4px 2px;font-size:12px;">
+                    <a href="https://github.com/Jacker2099/flowstoken-desktop/releases" target="_blank" rel="noopener" style="color:#64748b;text-decoration:none;">
+                      查看全部版本 ↗
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <div style="background:#f8fafc;border:1px solid #cbd5e1;border-radius:10px;padding:12px;font-size:12px;line-height:1.55;color:#334155;">
+                  <strong style="color:#0f172a;display:block;margin-bottom:4px;">💡 安装提示</strong>
+                  浏览器下载 APK 后直接安装；若系统提示「未知来源」，在弹窗中允许本次安装即可。APK 为官方签名包，请勿从其他渠道下载。
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="dl-note">提示：手机端对话计费与分组仍走你的 FlowsToken 账户；直连模式与配对模式的余额、模型目录完全一致。</p>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="guide">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">使用说明</p>
+            <h2>两种模式，各取所需。</h2>
+            <p>直连模式让手机独立可用；配对模式把手机变成桌面端的远程窗口。两者可同时存在。</p>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">01</div>
+              <div>
+                <h3>直连模式：登录即聊</h3>
+                <p>打开 App 选择「登录账号」，浏览器会拉起 FlowsToken 授权页，确认后自动返回。之后即可发起<strong>直连会话</strong>——模型按你账户的分组路由（普通组 / 智能组 Bestoo-Auto / 官方组），<strong>桌面端关机也能正常对话</strong>。</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">02</div>
+              <div>
+                <h3>配对模式：扫码连接桌面</h3>
+                <p>在桌面端生成配对邀请码 / 二维码，手机扫码即完成配对。配对后可远程查看正在运行的 Agent 会话、回复消息、收发附件、切换模型与思考强度。</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">03</div>
+              <div>
+                <h3>桌面在线状态自动感知</h3>
+                <p>桌面离线时，配对会话会显示离线并暂时不可用，<strong>直连会话不受影响</strong>；桌面重新上线后配对会话自动恢复，无需重新扫码。</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">04</div>
+              <div>
+                <h3>会话标识与本地保存</h3>
+                <p>直连会话在列表中带有「这台手机」标识，本地改名、置顶、删除均可；配对会话始终与桌面端保持一致。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">常见问题</p>
+            <h2>你可能想问的。</h2>
+          </div>
+          <div class="groups">
+            <article class="group">
+              <p class="eyebrow">离线</p>
+              <h3>桌面关机能用吗？</h3>
+              <p class="basis">能。直连模式独立于桌面端，登录 FlowsToken 账号后直接对话；只有配对会话需要桌面在线。</p>
+            </article>
+            <article class="group">
+              <p class="eyebrow">计费</p>
+              <h3>计费与桌面端一致吗？</h3>
+              <p class="basis">一致。直连会话走服务端模型目录与账户分组，用量与余额在控制台同口径可查。</p>
+            </article>
+            <article class="group">
+              <p class="eyebrow">共存</p>
+              <h3>两种模式会冲突吗？</h3>
+              <p class="basis">不会。直连会话与配对会话在会话列表中并列展示、标识清晰，可随时切换。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-final">
+        <div class="wrap">
+          <p class="eyebrow">也看看桌面端</p>
+          <h2>桌面 + 移动，<br />全端统一账户。</h2>
+          <div class="hero-actions">
+            <a class="btn btn-accent btn-lg" href="/desktop">桌面端下载 <span class="arrow">→</span></a>
+            <a class="btn btn-outline btn-lg" href="/register">免费注册</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="FlowsToken">
+            <img class="brand-mark" src="/brand/logo-mark.png?v=20260915g" alt="" width="46" height="26" />
+            <span class="brand-word">Flows<b>Token</b></span>
+          </a>
+          <p>智能选模，一个入口。OpenAI / Anthropic 兼容 API，预付费按量计费。</p>
+          <p class="addr">Bestoo Service LLC<br />30 N Gould St Ste N, Sheridan, WY 82801, US</p>
+        </div>
+        <div>
+          <h4>产品</h4>
+          <nav>
+            <a href="/smart-api">智能API</a>
+            <a href="/desktop">桌面端</a>
+            <a href="/mobile">移动端</a>
+            <a href="/pricing">模型广场</a>
+            <a href="/docs">配置教程</a>
+            <a href="/console/token">密钥管理</a>
+            <a href="/console/topup">充值</a>
+          </nav>
+        </div>
+        <div>
+          <h4>公司</h4>
+          <nav>
+            <a href="/about.html">关于我们</a>
+            <a href="/announce.html">公告</a>
+            <a href="/contact.html">联系我们</a>
+          </nav>
+        </div>
+        <div>
+          <h4>法律</h4>
+          <nav>
+            <a href="/legal">法律中心</a>
+            <a href="/privacy.html">隐私政策</a>
+            <a href="/terms.html">服务条款</a>
+            <a href="/refund.html">退款政策</a>
+            <a href="/acceptable-use.html">可接受使用政策</a>
+          </nav>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="footer-bottom">
+          <span>© 2026 Bestoo Service LLC. All rights reserved.</span>
+          <span class="status">客服与技术支持 7×24 · <a href="mailto:chowjack2098@gmail.com">chowjack2098@gmail.com</a> · <a href="tel:+19192131199">+1 919 213 1199</a></span>
+        </div>
+        <p class="footer-legal">
+          FlowsToken / Bestoo 为第三方技术平台，与 OpenAI、Anthropic、Google 等模型厂商无从属、授权或直接关联关系。文中提及的品牌与商标归各自所有者所有。充值支付经合规支付通道处理，服务与额度由本公司提供与支持。
+        </p>
+      </div>
+    </footer>
+
+    <script src="/assets/site.js" defer></script>
+    <script src="/brand/home-auth-nav.js?v=20260914a" defer></script>
+  </body>
+</html>
