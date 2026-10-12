@@ -27,7 +27,7 @@ fi
 
 # 2. 识别芯片架构
 ARCH="$(uname -m)"
-VERSION="0.7.1"
+VERSION="0.7.2"
 
 if [ "$ARCH" = "arm64" ]; then
     DMG_NAME="FlowsToken-${VERSION}-arm64.dmg"
